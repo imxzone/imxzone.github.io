@@ -23,3 +23,28 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+// Theme toggle: persist preference in localStorage and apply on load
+(function(){
+    const themeToggle = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    const initial = saved ? saved : (prefersLight ? 'light' : 'dark');
+
+    function applyTheme(theme){
+        if(theme === 'light') document.documentElement.classList.add('light-theme');
+        else document.documentElement.classList.remove('light-theme');
+        if(themeToggle) themeToggle.textContent = theme === 'light' ? '☀️' : '🌙';
+    }
+
+    applyTheme(initial);
+
+    if(themeToggle){
+        themeToggle.addEventListener('click', ()=>{
+            const isLight = document.documentElement.classList.contains('light-theme');
+            const next = isLight ? 'dark' : 'light';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        });
+    }
+})();
