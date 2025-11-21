@@ -302,6 +302,35 @@ span{
     background-color: var(--bg-color);
     width: 50px;
 }
+
+/* Language switch button styling */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+.btn-lang {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-left: 2rem;
+    text-align: center;
+}
+.btn-lang:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+    background: white;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
 .services{
     background: var(--bg-color);
     color: white;
