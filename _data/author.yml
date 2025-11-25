@@ -1,0 +1,22 @@
+name: "Phan Loc"
+nickname: "imxzone"
+
+headline: "It's Phan Loc"
+tagline: "I'm a final-year student at FPT University, focusing on AI and Data."
+
+avatar: "/images/avatar.jpg"
+about_image: "/images/image1.jpg"
+
+bio: >
+  I am currently in my final year at FPT University in Ho Chi Minh City,
+  and I am looking for an internship with the possibility of a full-time position afterwards.
+  My research areas are Natural Language Processing, Computer Vision, and Deep Learning.
+  My interests lie in Visual Question Answering, Relationship Extraction, and summarization.
+
+quote: "My life philosophy is to face challenges confidently because I always prepare for them."
+
+social:
+  linkedin: "https://www.linkedin.com/in/imxzone"
+  facebook: "https://www.facebook.com/zone2k1/"
+  github: "https://github.com/imxzone"
+  youtube: "https://www.youtube.com/@imxzone"

@@ -1,0 +1,24 @@
+{%- assign author = site.data.author -%}
+
+<header class="header">
+    <a href="{{ "/" | relative_url }}" class="logo">
+        {{ author.name }}
+        <span>{{ author.nickname }}</span>
+    </a>
+    
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+        {% for item in site.data.navigation.main %}
+            <a href="{{ item.url | relative_url }}"
+               class="{% if page.url == item.url %}active{% endif %}">
+                {{ item.title }}
+            </a>
+        {% endfor %}
+    </nav>
+
+    <div class="lang-switch">
+        <a href="/vi/" class="btn-lang">Vietnamese</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+</header>

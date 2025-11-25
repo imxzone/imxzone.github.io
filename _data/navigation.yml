@@ -1,0 +1,13 @@
+main:
+  - title: "Publications"
+    url: "/publications/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Talks"
+    url: "/talks/"
+  - title: "Teaching"
+    url: "/teaching/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Resume"
+    url: "/resume/"

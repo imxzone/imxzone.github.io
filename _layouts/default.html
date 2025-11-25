@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% if page.title %}
+            {{ page.title }} | {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+
+    <link rel="stylesheet" href="{{ "/style.css" | relative_url }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script src="{{ "/scrip.js" | relative_url }}"></script>
+</body>
+</html>

@@ -1,198 +1,159 @@
 ---
+layout: default
 title: "Publications – Phan Loc"
+permalink: /publications/
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publications – Phan Loc</title>
+{% assign author = site.data.author %}
 
-  <!-- Dùng chung CSS & icon như index -->
-  <link rel="stylesheet" href="../style.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-</head>
-<body>
-  <!-- Header giống index, chỉ khác link & class active -->
-  <header class="header">
-    <a href="/" class="logo">Phan Loc
-      <span>imxzone</span>
-    </a>
-
-    <i class="bx bx-menu" id="menu-icon"></i>
-
-    <nav class="navbar">
-      <a href="/pages/publications.html" class="active">Publications</a>
-      <a href="/pages/projects.html">Projects</a>
-      <a href="/pages/talks.html">Talks</a>
-      <a href="/pages/teaching.html">Teaching</a>
-      <a href="/pages/blog.html">Blog</a>
-      <a href="/pages/resume.html">Resume</a>
-    </nav>
-
-    <div class="lang-switch">
-      <a href="/vi/" class="btn-lang">Vietnamese</a>
-    </div>
-
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-  </header>
-
-  <section class="publications-section" id="publications">
-    <div class="publications-layout">
-      <!-- SIDEBAR BÊN TRÁI -->
-      <aside class="pub-sidebar">
-        <div class="sidebar-card">
-          <div class="sidebar-avatar">
-            <!-- Nếu có ảnh thật thì đổi thành <img src="link-avatar" alt="Phan Loc"> -->
-            <span class="avatar-initials">PL</span>
-          </div>
-
-          <h3 class="sidebar-name">Phan Loc</h3>
-          <p class="sidebar-bio">
-            Short biography for the left-hand sidebar.
-            A researcher and AI engineer interested in
-            NLP, Computer Vision, and Deep Learning.
-          </p>
-
-          <ul class="sidebar-meta">
-            <li>
-              <i class="bx bx-map"></i>
-              <span>Earth</span>
-            </li>
-            <li>
-              <i class="bx bxs-school"></i>
-              <span>Red Brick University</span>
-            </li>
-            <li>
-              <i class="bx bx-envelope"></i>
-              <a href="mailto:you@example.com">you@example.com</a>
-            </li>
-          </ul>
-
-          <ul class="sidebar-links">
-            <li>
-              <i class="bx bxl-google"></i>
-              <a href="#" target="_blank" rel="noopener">Google Scholar</a>
-            </li>
-            <li>
-              <i class="bx bx-id-card"></i>
-              <a href="#" target="_blank" rel="noopener">ORCID</a>
-            </li>
-            <li>
-              <i class="bx bx-book-open"></i>
-              <a href="#" target="_blank" rel="noopener">PubMed</a>
-            </li>
-            <li>
-              <i class="bx bxl-github"></i>
-              <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-            </li>
-            <li>
-              <i class="bx bx-cloud"></i>
-              <a href="#" target="_blank" rel="noopener">Bluesky</a>
-            </li>
-          </ul>
+<section class="publications-section" id="publications">
+  <div class="publications-layout">
+    <!-- SIDEBAR BÊN TRÁI -->
+    <aside class="pub-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-avatar">
+          {% if author.avatar %}
+            <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}">
+          {% else %}
+            <span class="avatar-initials">
+              {{ author.name | split: ' ' | last | slice: 0,1 | upcase }}{{ author.name | split: ' ' | first | slice: 0,1 | upcase }}
+            </span>
+          {% endif %}
         </div>
-      </aside>
 
-      <!-- NỘI DUNG PUBLICATIONS BÊN PHẢI -->
-      <div class="publications-inner">
-        <h2 class="heading">Publications</h2>
-        
-        <p class="pub-intro">
-          Here is a selection of my research work and technical writings in AI,
-          including Natural Language Processing, Computer Vision, and Deep Learning.
+        <h3 class="sidebar-name">{{ author.name }}</h3>
+        <p class="sidebar-bio">
+          {{ author.sidebar_bio | default: author.bio }}
         </p>
 
-        <div class="pub-list">
-          {%- comment -%}
-          Loop qua data trong _data/publications.yml
-          Mỗi phần tử là 1 publication
-          {%- endcomment -%}
-          {% for pub in site.data.publications %}
-            <div class="pub-item">
-              <h3 class="pub-title">
-                {% if pub.link %}
-                  <a href="{{ pub.link }}" target="_blank" rel="noopener">
-                    {{ pub.title }}
-                  </a>
-                {% else %}
-                  {{ pub.title }}
-                {% endif %}
-              </h3>
+        <ul class="sidebar-meta">
+          {% if author.location %}
+          <li>
+            <i class="bx bx-map"></i>
+            <span>{{ author.location }}</span>
+          </li>
+          {% endif %}
 
-              <p class="pub-meta">
-                {% if pub.authors %}
-                  <strong>{{ pub.authors }}</strong>
+          {% if author.affiliation %}
+          <li>
+            <i class="bx bxs-school"></i>
+            <span>{{ author.affiliation }}</span>
+          </li>
+          {% endif %}
+
+          {% if author.email %}
+          <li>
+            <i class="bx bx-envelope"></i>
+            <a href="mailto:{{ author.email }}">{{ author.email }}</a>
+          </li>
+          {% endif %}
+        </ul>
+
+        <ul class="sidebar-links">
+          {% if author.links.scholar %}
+          <li>
+            <i class="bx bxl-google"></i>
+            <a href="{{ author.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+          </li>
+          {% endif %}
+
+          {% if author.links.orcid %}
+          <li>
+            <i class="bx bx-id-card"></i>
+            <a href="{{ author.links.orcid }}" target="_blank" rel="noopener">ORCID</a>
+          </li>
+          {% endif %}
+
+          {% if author.links.pubmed %}
+          <li>
+            <i class="bx bx-book-open"></i>
+            <a href="{{ author.links.pubmed }}" target="_blank" rel="noopener">PubMed</a>
+          </li>
+          {% endif %}
+
+          {% if author.links.github %}
+          <li>
+            <i class="bx bxl-github"></i>
+            <a href="{{ author.links.github }}" target="_blank" rel="noopener">GitHub</a>
+          </li>
+          {% endif %}
+
+          {% if author.links.bluesky %}
+          <li>
+            <i class="bx bx-cloud"></i>
+            <a href="{{ author.links.bluesky }}" target="_blank" rel="noopener">Bluesky</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </aside>
+
+    <!-- NỘI DUNG PUBLICATIONS BÊN PHẢI -->
+    <div class="publications-inner">
+      <h2 class="heading">Publications</h2>
+      
+      <p class="pub-intro">
+        Here is a selection of my research work and technical writings in AI,
+        including Natural Language Processing, Computer Vision, and Deep Learning.
+      </p>
+
+      <div class="pub-list">
+        {% for pub in site.data.publications %}
+          <div class="pub-item">
+            <h3 class="pub-title">
+              {% if pub.link %}
+                <a href="{{ pub.link }}" target="_blank" rel="noopener">
+                  {{ pub.title }}
+                </a>
+              {% else %}
+                {{ pub.title }}
+              {% endif %}
+            </h3>
+
+            <p class="pub-meta">
+              {% if pub.authors %}
+                <strong>{{ pub.authors }}</strong>
+              {% endif %}
+              {% if pub.venue %}
+                – {{ pub.venue }}
+              {% endif %}
+              {% if pub.year %}
+                , {{ pub.year }}
+              {% endif %}
+            </p>
+
+            {% if pub.tags %}
+              <p class="pub-tags">
+                {% for tag in pub.tags %}
+                  <span class="pub-tag">{{ tag }}</span>
+                {% endfor %}
+              </p>
+            {% endif %}
+
+            {% if pub.description %}
+              <p class="pub-desc">
+                {{ pub.description }}
+              </p>
+            {% endif %}
+
+            {% if pub.pdf or pub.code or pub.slides %}
+              <p class="pub-links">
+                {% if pub.pdf %}
+                  <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
                 {% endif %}
-                {% if pub.venue %}
-                  – {{ pub.venue }}
+                {% if pub.code %}
+                  {% if pub.pdf %} · {% endif %}
+                  <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
                 {% endif %}
-                {% if pub.year %}
-                  , {{ pub.year }}
+                {% if pub.slides %}
+                  {% if pub.pdf or pub.code %} · {% endif %}
+                  <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
                 {% endif %}
               </p>
-
-              {% if pub.tags %}
-                <p class="pub-tags">
-                  {% for tag in pub.tags %}
-                    <span class="pub-tag">{{ tag }}</span>
-                  {% endfor %}
-                </p>
-              {% endif %}
-
-              {% if pub.description %}
-                <p class="pub-desc">
-                  {{ pub.description }}
-                </p>
-              {% endif %}
-
-              {% if pub.pdf or pub.code or pub.slides %}
-                <p class="pub-links">
-                  {% if pub.pdf %}
-                    <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
-                  {% endif %}
-                  {% if pub.code %}
-                    {% if pub.pdf %} · {% endif %}
-                    <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
-                  {% endif %}
-                  {% if pub.slides %}
-                    {% if pub.pdf or pub.code %} · {% endif %}
-                    <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
-                  {% endif %}
-                </p>
-              {% endif %}
-            </div>
-          {% endfor %}
-        </div>
+            {% endif %}
+          </div>
+        {% endfor %}
       </div>
     </div>
-  </section>
-
-
-  <!-- Footer giống index -->
-  <footer class="footer">
-    <div class="social">
-      <a href="#"><i class='bx bxl-linkedin'></i></a>
-      <a href="#"><i class='bx bxl-facebook'></i></a>
-      <a href="#"><i class='bx bxl-github'></i></a>
-      <a href="#"><i class='bx bxl-youtube'></i></a>
-    </div>
-
-    <ul class="list">
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">About Me</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-    </ul>
-
-    <p class="copyright">
-      @ Phan Loc | All Rights Reserved
-    </p>
-  </footer>
-
-  <!-- Dùng chung script với index -->
-  <script src="../scrip.js"></script>
-</body>
-</html>
+  </div>
+</section>
