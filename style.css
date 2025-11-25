@@ -599,3 +599,56 @@ span{
 }
 
 /* 32:45 *\
+.publications-section {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Khối nội dung ở giữa, không full màn hình */
+.publications-inner {
+    max-width: 1000px;   /* bạn có thể chỉnh 900–1100 tuỳ mắt */
+    margin: 0 auto;
+}
+
+/* Để heading bên trái giống site academic */
+.publications-inner .heading {
+    text-align: left;
+    font-size: 4rem;     /* nhỏ hơn heading trang chủ chút cho đỡ “hét” */
+    margin-bottom: 2rem;
+}
+
+.pub-intro {
+    font-size: 1.6rem;
+    max-width: 800px;
+    margin: 0 0 3rem;
+}
+
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.pub-item {
+    padding: 2rem 2.5rem;
+    border-radius: 1.5rem;
+    background: var(--second-bg-color);
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.pub-title {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    color: var(--heading-color);
+}
+
+.pub-meta {
+    font-size: 1.4rem;
+    color: #aaa;
+    margin-bottom: 0.8rem;
+}
+
+.pub-desc {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
