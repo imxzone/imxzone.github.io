@@ -1,8 +1,50 @@
-title: "Phan Loc – imxzone"
-url: "imxzone.github.io"
+locale: "vi-VN"        # hoặc "en" / "vi"
+site_theme: "default"  # để yên cũng được
+title: "Phan Loc — Portfolio"
+title_separator: "-"
+name: &name "Phan Loc"
+nickname: &nickname "imxzone"
+description: &description "Phan Loc's AI & Data portfolio"
+url: "https://imxzone.github.io"
+baseurl: ""
+repository: "imxzone/imxzone.github.io"
+
+author:
+  avatar: "images/avatar.jpg"
+  name: "Phan Loc"
+  bio: "student at FPT University HCMC. Interested in NLP, CV, Deep Learning."
+  location: "Ho Chi Minh City, Vietnam"
+  email: "forsakenzone9822@gmail.com"          # nếu muốn show
+
+  github: "imxzone"
+  facebook: "zone2k1"
+  youtube: "imxzone"    # hoặc username channel
+  linkedin: ""          # thêm sau cũng được
+
+
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 
-# Outputing
-# permalink: /:categories/:title/
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:categories/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
 timezone: Asia/Ho_Chi_Minh
