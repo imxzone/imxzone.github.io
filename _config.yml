@@ -1,2 +1,8 @@
 title: "Phan Loc – imxzone"
+url: "imxzone.github.io"
 markdown: kramdown
+
+
+# Outputing
+permalink: /:categories/:title/
+timezone: Asia/Ho_Chi_Minh
