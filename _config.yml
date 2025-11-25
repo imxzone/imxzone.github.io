@@ -4,5 +4,5 @@ markdown: kramdown
 
 
 # Outputing
-permalink: /:categories/:title/
+# permalink: /:categories/:title/
 timezone: Asia/Ho_Chi_Minh
