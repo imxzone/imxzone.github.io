@@ -1,7 +1,3 @@
----
-title: "Publications – Phan Loc"
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,65 +101,148 @@ title: "Publications – Phan Loc"
         </p>
 
         <div class="pub-list">
-          {%- comment -%}
-          Loop qua data trong _data/publications.yml
-          Mỗi phần tử là 1 publication
-          {%- endcomment -%}
-          {% for pub in site.data.publications %}
             <div class="pub-item">
               <h3 class="pub-title">
-                {% if pub.link %}
-                  <a href="{{ pub.link }}" target="_blank" rel="noopener">
-                    {{ pub.title }}
+                
+                  <a href="https://example.com/paper3" target="_blank" rel="noopener">
+                    Paper Title Number 3
                   </a>
-                {% else %}
-                  {{ pub.title }}
-                {% endif %}
+                
               </h3>
 
               <p class="pub-meta">
-                {% if pub.authors %}
-                  <strong>{{ pub.authors }}</strong>
-                {% endif %}
-                {% if pub.venue %}
-                  – {{ pub.venue }}
-                {% endif %}
-                {% if pub.year %}
-                  , {{ pub.year }}
-                {% endif %}
+                
+                  <strong>Phan Loc, Co-author</strong>
+                
+                
+                  – Journal 1
+                
+                
+                  , 2015
+                
               </p>
 
-              {% if pub.tags %}
+              
                 <p class="pub-tags">
-                  {% for tag in pub.tags %}
-                    <span class="pub-tag">{{ tag }}</span>
-                  {% endfor %}
+                  
+                    <span class="pub-tag">NLP</span>
+                  
+                    <span class="pub-tag">Deep Learning</span>
+                  
                 </p>
-              {% endif %}
+              
 
-              {% if pub.description %}
+              
                 <p class="pub-desc">
-                  {{ pub.description }}
+                  Short description of the work: problem, dataset, method, results…
                 </p>
-              {% endif %}
+              
 
-              {% if pub.pdf or pub.code or pub.slides %}
+              
                 <p class="pub-links">
-                  {% if pub.pdf %}
-                    <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
-                  {% endif %}
-                  {% if pub.code %}
-                    {% if pub.pdf %} · {% endif %}
-                    <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
-                  {% endif %}
-                  {% if pub.slides %}
-                    {% if pub.pdf or pub.code %} · {% endif %}
-                    <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
-                  {% endif %}
+                  
+                    <a href="files/paper3.pdf" target="_blank" rel="noopener">PDF</a>
+                  
+                  
+                     · 
+                    <a href="https://github.com/username/paper3-code" target="_blank" rel="noopener">Code</a>
+                  
+                  
+                     · 
+                    <a href="files/paper3-slides.pdf" target="_blank" rel="noopener">Slides</a>
+                  
                 </p>
-              {% endif %}
+              
             </div>
-          {% endfor %}
+          
+            <div class="pub-item">
+              <h3 class="pub-title">
+                
+                  Paper Title Number 2
+                
+              </h3>
+
+              <p class="pub-meta">
+                
+                  <strong>Phan Loc</strong>
+                
+                
+                  – Journal 1
+                
+                
+                  , 2010
+                
+              </p>
+
+              
+                <p class="pub-tags">
+                  
+                    <span class="pub-tag">Computer Vision</span>
+                  
+                </p>
+              
+
+              
+                <p class="pub-desc">
+                  Another research about number 2 and its applications.
+                </p>
+              
+
+              
+                <p class="pub-links">
+                  
+                    <a href="files/paper2.pdf" target="_blank" rel="noopener">PDF</a>
+                  
+                  
+                  
+                </p>
+              
+            </div>
+          
+            <div class="pub-item">
+              <h3 class="pub-title">
+                
+                  <a href="https://dl.acm.org/doi/10.1145/3654522.3654569" target="_blank" rel="noopener">
+                    Denoising Fourier Noise using REDNet in Image
+                  </a>
+                
+              </h3>
+
+              <p class="pub-meta">
+                
+                  <strong>Loc Minh Phan, Thinh Tan Hung Duong</strong>
+                
+                
+                  – Proceedings of the 2024 9th International Conference on Intelligent Information Technology
+                
+                
+                  , 2014
+                
+              </p>
+
+              
+                <p class="pub-tags">
+                  
+                    <span class="pub-tag">Image Denoising</span>
+                  
+                    <span class="pub-tag">Deep Learning</span>
+                  
+                    <span class="pub-tag">Fourier Noise</span>
+                  
+                    <span class="pub-tag">Computer Vision</span>
+                  
+                </p>
+              
+
+              
+                <p class="pub-desc">
+                  Fourier noise, often referred to as frequency domain noise, is a particular kind of interference or noise that affects data, pictures, audio, and digital signals in the frequency domain. The Fourier transform—a basic mathematical tool for the study and manipulation of signals in the frequency domain—was invented by renowned mathematician and scientist Jean-Baptiste Joseph Fourier, who is honored by the name of this noise. However, existing method for denoising Fourier Noise such as FFT has a significant drawback. FFT can not automatically denoise Fourier, we have to adjust it. Therefore, this method still not the best solution for denoising Fourier Noise. To address this challenge, our study proposes a novel approach that is Residual Encoder-Decoder Network(REDNet). It is a deep neural network architecture developed specifically for problems involving picture restoration, particularly denoising. The result have PSNR, MSE are 5,72 and 104,52 respectively. These result indicated REDNet is designed for denoising image and work well on denoising Fourier.
+                </p>
+              
+
+              
+            </div>
+          
         </div>
       </div>
     </div>
