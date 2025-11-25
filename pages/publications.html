@@ -1,3 +1,7 @@
+---
+title: "Publications – Phan Loc"
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,30 +39,77 @@
   </header>
 
   <section class="publications-section" id="publications">
-  <div class="publications-inner">
-    <h2 class="heading">Publications</h2>
+    <div class="publications-inner">
+      <h2 class="heading">Publications</h2>
+      
+      <p class="pub-intro">
+        Here is a selection of my research work and technical writings in AI,
+        including Natural Language Processing, Computer Vision, and Deep Learning.
+      </p>
 
-    <p class="pub-intro">
-      Here is a selection of my research work and technical writings in AI,
-      including Natural Language Processing, Computer Vision, and Deep Learning.
-    </p>
+      <div class="pub-list">
+        {%- comment -%}
+        Loop qua data trong _data/publications.yml
+        Mỗi phần tử là 1 publication
+        {%- endcomment -%}
+        {% for pub in site.data.publications %}
+          <div class="pub-item">
+            <h3 class="pub-title">
+              {% if pub.link %}
+                <a href="{{ pub.link }}" target="_blank" rel="noopener">
+                  {{ pub.title }}
+                </a>
+              {% else %}
+                {{ pub.title }}
+              {% endif %}
+            </h3>
 
-    <div class="pub-list">
-      <div class="pub-item">
-        <h3 class="pub-title">Paper Title Number 3</h3>
-        <p class="pub-meta">
-          <strong>Phan Loc</strong>, Co-author – Journal 1, 2015
-        </p>
-        <p class="pub-desc">
-          Short description of the work: problem, dataset, method, results…
-        </p>
+            <p class="pub-meta">
+              {% if pub.authors %}
+                <strong>{{ pub.authors }}</strong>
+              {% endif %}
+              {% if pub.venue %}
+                – {{ pub.venue }}
+              {% endif %}
+              {% if pub.year %}
+                , {{ pub.year }}
+              {% endif %}
+            </p>
+
+            {% if pub.tags %}
+              <p class="pub-tags">
+                {% for tag in pub.tags %}
+                  <span class="pub-tag">{{ tag }}</span>
+                {% endfor %}
+              </p>
+            {% endif %}
+
+            {% if pub.description %}
+              <p class="pub-desc">
+                {{ pub.description }}
+              </p>
+            {% endif %}
+
+            {% if pub.pdf or pub.code or pub.slides %}
+              <p class="pub-links">
+                {% if pub.pdf %}
+                  <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
+                {% endif %}
+                {% if pub.code %}
+                  {% if pub.pdf %} · {% endif %}
+                  <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
+                {% endif %}
+                {% if pub.slides %}
+                  {% if pub.pdf or pub.code %} · {% endif %}
+                  <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
+                {% endif %}
+              </p>
+            {% endif %}
+          </div>
+        {% endfor %}
       </div>
-
-      <!-- thêm các pub khác ở đây -->
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Footer giống index -->
   <footer class="footer">

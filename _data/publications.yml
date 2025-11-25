@@ -1,0 +1,25 @@
+- title: "Paper Title Number 3"
+  authors: "Phan Loc, Co-author"
+  venue: "Journal 1"
+  year: 2015
+  description: "Short description of the work: problem, dataset, method, results…"
+  link: "https://example.com/paper3"   # link tổng, optional
+  pdf: "files/paper3.pdf"              # optional
+  code: "https://github.com/username/paper3-code"  # optional
+  slides: "files/paper3-slides.pdf"    # optional
+  tags: ["NLP", "Deep Learning"]
+
+- title: "Paper Title Number 2"
+  authors: "Phan Loc"
+  venue: "Journal 1"
+  year: 2010
+  description: "Another research about number 2 and its applications."
+  pdf: "files/paper2.pdf"
+  tags: ["Computer Vision"]
+
+- title: "Paper Title Number 1"
+  authors: "Phan Loc"
+  venue: "Journal 1"
+  year: 2009
+  description: "First paper in my research journey."
+  tags: ["AI"]
