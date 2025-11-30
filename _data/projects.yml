@@ -4,24 +4,24 @@
   github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
   tags: ["NLP", "RAG", "FAISS"]
   tech: "Python · PyTorch · FAISS"
-  image: ""
+  image: "/images/projects/Fourier Noise Denoising using REDNet.png"
   star: true
 
-- title: "Fourier Noise Denoising using REDNet"
+- title: "projects 2 "
   description: "Deep learning model to remove Fourier noise from images."
   github: ""
   tags: ["Computer Vision", "Denoising"]
   tech: "CV · REDNet"
   star: true
 
-- title: "Speech Emotion Recognition"
+- title: "project 3"
   description: "Audio-based emotion recognition using deep learning."
   github: ""
   tags: ["Audio AI", "Deep Learning"]
   tech: "Python · Librosa · PyTorch"
   star: false
 
-- title: "Fourier Noise Denoising using REDNet"
+- title: "project 4"
   year: 2024
   description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
   github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
@@ -30,21 +30,21 @@
   image: ""
   star: true
 
-- title: "Fourier Noise Denoising using REDNet"
+- title: "5"
   description: "Deep learning model to remove Fourier noise from images."
   github: ""
   tags: ["Computer Vision", "Denoising"]
   tech: "CV · REDNet"
   star: true
 
-- title: "Speech Emotion Recognition"
+- title: "6"
   description: "Audio-based emotion recognition using deep learning."
   github: ""
   tags: ["Audio AI", "Deep Learning"]
   tech: "Python · Librosa · PyTorch"
   star: false
 
-- title: "Fourier Noise Denoising using REDNet"
+- title: "7"
   year: 2024
   description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
   github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
@@ -53,14 +53,14 @@
   image: ""
   star: true
 
-- title: "Fourier Noise Denoising using REDNet"
+- title: "8"
   description: "Deep learning model to remove Fourier noise from images."
   github: ""
   tags: ["Computer Vision", "Denoising"]
   tech: "CV · REDNet"
   star: true
 
-- title: "Speech Emotion Recognition"
+- title: "9"
   description: "Audio-based emotion recognition using deep learning."
   github: ""
   tags: ["Audio AI", "Deep Learning"]

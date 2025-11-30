@@ -57,24 +57,32 @@ permalink: /
     <h2 class="heading">Projects</h2>
 
     <div class="services-container">
-        {% for project in site.data.projects %}
-        <div class="services-box">
-            <div class="services-info">
+        {%- assign top_projects = site.data.projects | where: "star", true -%}
 
+        {%- for project in top_projects limit:6 -%}
+        <div class="services-box">
+
+            {% if project.image %}
+            <div class="project-image-wrapper">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
+            </div>
+            {% endif %}
+
+            <div class="services-info">
                 <h4>{{ project.title }}</h4>
                 <p>{{ project.description }}</p>
 
+                {% if project.tech %}
+                <p class="project-tech">{{ project.tech }}</p>
+                {% endif %}
+
                 {% if project.github %}
-                    <a href="{{ project.github }}" target="_blank" class="btn">View Project</a>
+                    <a href="{{ project.github }}" target="_blank" class="btn">View Details</a>
                 {% endif %}
-
-                {% if project.star %}
-                    <div class="github-star" data-repo="{{ project.github }}"></div>
-                {% endif %}
-
             </div>
+
         </div>
-        {% endfor %}
+        {%- endfor -%}
     </div>
 </section>
 
