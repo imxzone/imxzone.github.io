@@ -710,10 +710,7 @@ span{
   text-decoration: underline;
 }
 
-/* -------- NỘI DUNG PUBLICATIONS BÊN PHẢI -------- */
-
 .publications-inner {
-  /* khung bên phải dùng cột 2 của grid */
 }
 
 .publications-inner .heading {

@@ -1,0 +1,68 @@
+- title: "Fourier Noise Denoising using REDNet"
+  year: 2024
+  description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+  github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  image: ""
+  star: true
+
+- title: "Fourier Noise Denoising using REDNet"
+  description: "Deep learning model to remove Fourier noise from images."
+  github: ""
+  tags: ["Computer Vision", "Denoising"]
+  tech: "CV · REDNet"
+  star: true
+
+- title: "Speech Emotion Recognition"
+  description: "Audio-based emotion recognition using deep learning."
+  github: ""
+  tags: ["Audio AI", "Deep Learning"]
+  tech: "Python · Librosa · PyTorch"
+  star: false
+
+- title: "Fourier Noise Denoising using REDNet"
+  year: 2024
+  description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+  github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  image: ""
+  star: true
+
+- title: "Fourier Noise Denoising using REDNet"
+  description: "Deep learning model to remove Fourier noise from images."
+  github: ""
+  tags: ["Computer Vision", "Denoising"]
+  tech: "CV · REDNet"
+  star: true
+
+- title: "Speech Emotion Recognition"
+  description: "Audio-based emotion recognition using deep learning."
+  github: ""
+  tags: ["Audio AI", "Deep Learning"]
+  tech: "Python · Librosa · PyTorch"
+  star: false
+
+- title: "Fourier Noise Denoising using REDNet"
+  year: 2024
+  description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+  github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  image: ""
+  star: true
+
+- title: "Fourier Noise Denoising using REDNet"
+  description: "Deep learning model to remove Fourier noise from images."
+  github: ""
+  tags: ["Computer Vision", "Denoising"]
+  tech: "CV · REDNet"
+  star: true
+
+- title: "Speech Emotion Recognition"
+  description: "Audio-based emotion recognition using deep learning."
+  github: ""
+  tags: ["Audio AI", "Deep Learning"]
+  tech: "Python · Librosa · PyTorch"
+  star: false
