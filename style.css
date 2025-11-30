@@ -17,7 +17,6 @@ font-family: "Poppins", sans-serif;
  --service-box-text: black;
 }
 
-/* Light theme overrides — add/remove the class `light-theme` on the <html> element */
 .light-theme{
     --bg-color: #f7f7f8;
     --second-bg-color: #ffffff;
@@ -200,11 +199,11 @@ span{
 @keyframes words{
     0%,
     20%{
-        content: 'Data Analyst';
+        content: 'AI Researcher';
     }
     21%,
     40%{
-        content: "Graphic Designer";
+        content: "Data Analyst";
     }
     41%,
     60%{
@@ -803,7 +802,7 @@ span{
   }
 
   .pub-sidebar {
-    order: -1; /* sidebar nằm trên khi mobile */
+    order: -1;
   }
 
   .sidebar-card {
@@ -813,4 +812,14 @@ span{
   .publications-inner .heading {
     text-align: center;
   }
+}
+
+.affiliation-link {
+    color: var(--main-color); 
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.affiliation-link:hover {
+    text-decoration: underline;
 }
