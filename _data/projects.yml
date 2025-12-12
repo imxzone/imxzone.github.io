@@ -7,11 +7,12 @@
   image: "/images/projects/Fourier Noise Denoising using REDNet.png"
   star: true
 
-- title: "projects 2 "
-  description: "Deep learning model to remove Fourier noise from images."
-  github: ""
-  tags: ["Computer Vision", "Denoising"]
-  tech: "CV · REDNet"
+- title: "AI-Face-Recognition-Check-in-System"
+  description: "A real-time event check-in system using AI-based face recognition from a webcam, optimized for Edge (CPU) environments."
+  github: "https://github.com/imxzone/AI-Face-Recognition-Check-in-System"
+  tags: ["Face Recognition", "Event Check-in", "Real-time", "Edge AI"]
+  tech: "Python · InsightFace · OpenCV · NumPy · Pandas
+  image: "/images/projects/AI-Face-Recognition-Check-in-System.png"
   star: true
 
 - title: "project 3"
