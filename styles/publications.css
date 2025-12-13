@@ -205,24 +205,3 @@
 .affiliation-link:hover {
     text-decoration: underline;
 }
-
-/* Authors + Venue xuống dòng rõ ràng */
-.pub-authors {
-  font-size: 1.4rem;
-  color: #dddddd;
-  margin-bottom: 0.4rem;
-}
-
-.pub-venue {
-  font-size: 1.3rem;
-  color: #aaaaaa;
-  margin-bottom: 0.8rem;
-}
-
-/* Mô tả giới hạn 5 dòng và hiện ... */
-.clamp-5 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5; /* đổi 4 hoặc 5 tùy bạn */
-  overflow: hidden;
-}
