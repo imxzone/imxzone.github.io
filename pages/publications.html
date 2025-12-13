@@ -50,17 +50,35 @@ permalink: /publications/
         </ul>
 
         <ul class="sidebar-links">
-
-          {% for item in author.social %}
+          {% if author.links.linkedin %}
           <li>
-            <i class="bx bxl-{{ item[0] }}"></i>
-            <a href="{{ item[1] }}" target="_blank" rel="noopener">
-              {{ item[0] | capitalize }}
-            </a>
+            <i class="bx bxl-linkedin"></i>
+            <a href="{{ author.links.linkedin }}" target="_blank">LinkedIn</a>
           </li>
-          {% endfor %}
+          {% endif %}
 
+          {% if author.links.github %}
+          <li>
+            <i class="bx bxl-github"></i>
+            <a href="{{ author.links.github }}" target="_blank">GitHub</a>
+          </li>
+          {% endif %}
+
+          {% if author.links.youtube %}
+          <li>
+            <i class="bx bxl-youtube"></i>
+            <a href="{{ author.links.youtube }}" target="_blank">YouTube</a>
+          </li>
+          {% endif %}
+
+          {% if author.links.facebook %}
+          <li>
+            <i class="bx bxl-facebook"></i>
+            <a href="{{ author.links.facebook }}" target="_blank">Facebook</a>
+          </li>
+          {% endif %}
         </ul>
+
       </div>
     </aside>
 
