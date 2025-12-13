@@ -9,19 +9,6 @@ url: "https://imxzone.github.io"
 baseurl: ""
 repository: "imxzone/imxzone.github.io"
 
-author:
-  avatar: "images/avatar.jpg"
-  name: "Phan Loc"
-  bio: "student at FPT University HCMC. Interested in NLP, CV, Deep Learning."
-  location: "Ho Chi Minh City, Vietnam"
-  email: "forsakenzone9822@gmail.com"          # nếu muốn show
-
-  github: "imxzone"
-  facebook: "zone2k1"
-  youtube: "imxzone"    # hoặc username channel
-  linkedin: "imxzone"          # thêm sau cũng được
-
-
 markdown: kramdown
 highlighter: rouge
 kramdown:

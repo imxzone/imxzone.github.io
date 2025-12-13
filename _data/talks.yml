@@ -1,0 +1,69 @@
+- title: "Fourier Noise Denoising using REDNet"
+  year: 2024
+  description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+  github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  image: "/images/projects/Fourier Noise Denoising using REDNet.png"
+  star: true
+
+- title: "AI Face Recognition Check-in System"
+  description: "A real-time event check-in system using AI-based face recognition from a webcam, optimized for Edge (CPU) environments."
+  github: "https://github.com/imxzone/AI-Face-Recognition-Check-in-System"
+  tags: ["Face Recognition", "Event Check-in", "Real-time", "Edge AI"]
+  tech: "Python · InsightFace · OpenCV · NumPy · Pandas"
+  image: "/images/projects/AI Face Recognition Check-in System.jpg"
+  star: true
+
+- title: "project 3"
+  description: "Audio-based emotion recognition using deep learning."
+  github: ""
+  tags: ["Audio AI", "Deep Learning"]
+  tech: "Python · Librosa · PyTorch"
+  star: false
+
+- title: "project 4"
+  year: 2024
+  description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+  github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  image: ""
+  star: true
+
+- title: "5"
+  description: "Deep learning model to remove Fourier noise from images."
+  github: ""
+  tags: ["Computer Vision", "Denoising"]
+  tech: "CV · REDNet"
+  star: true
+
+- title: "6"
+  description: "Audio-based emotion recognition using deep learning."
+  github: ""
+  tags: ["Audio AI", "Deep Learning"]
+  tech: "Python · Librosa · PyTorch"
+  star: false
+
+- title: "7"
+  year: 2024
+  description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+  github: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  image: ""
+  star: true
+
+- title: "8"
+  description: "Deep learning model to remove Fourier noise from images."
+  github: ""
+  tags: ["Computer Vision", "Denoising"]
+  tech: "CV · REDNet"
+  star: true
+
+- title: "9"
+  description: "Audio-based emotion recognition using deep learning."
+  github: ""
+  tags: ["Audio AI", "Deep Learning"]
+  tech: "Python · Librosa · PyTorch"
+  star: false

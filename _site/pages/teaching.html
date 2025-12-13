@@ -1,172 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Your Name – CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #ffffff;
-      color: #333;
-    }
-    .top-nav {
-      display: flex;
-      align-items: center;
-      padding: 16px 40px;
-      border-bottom: 1px solid #eee;
-      font-size: 15px;
-    }
-    .top-nav .site-title {
-      font-weight: 600;
-      margin-right: 40px;
-    }
-    .top-nav a {
-      text-decoration: none;
-      color: #444;
-      margin-right: 20px;
-    }
-    .top-nav a:hover {
-      text-decoration: underline;
-    }
-
-    .layout {
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 32px 40px 60px;
-      box-sizing: border-box;
-    }
-    .sidebar {
-      width: 260px;
-      padding-right: 40px;
-      border-right: 1px solid #eee;
-      box-sizing: border-box;
-    }
-    .avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: #ddd;
-      margin-bottom: 20px;
-    }
-    .sidebar-name {
-      font-weight: 600;
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
-    .sidebar-bio {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 20px;
-    }
-    .sidebar-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 14px;
-    }
-    .sidebar-list li {
-      margin-bottom: 6px;
-    }
-
-    .content {
-      flex: 1;
-      padding-left: 40px;
-      box-sizing: border-box;
-    }
-    h1 {
-      font-size: 30px;
-      margin-top: 0;
-    }
-    h2 {
-      font-size: 24px;
-      margin-top: 24px;
-      margin-bottom: 6px;
-    }
-    h3 {
-      font-size: 18px;
-      margin-top: 18px;
-      margin-bottom: 4px;
-    }
-    ul {
-      margin-top: 4px;
-      padding-left: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name= "viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-  <!-- Top navigation -->
-  <header class="top-nav">
-    <div class="site-title">Your Name / Site Title</div>
-    <nav>
-      <a href="#">Publications</a>
-      <a href="#">Talks</a>
-      <a href="#">Teaching</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Blog Posts</a>
-      <a href="#">CV</a>
-      <a href="#">Guide</a>
-    </nav>
-  </header>
+    <header class="header">
+        <a href="#home" class="logo">Phan Loc
+        <span>imxzone</span></a>
+        
+        <i class="bx bx-menu" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="/pages/publications.html" class="active">Publications</a>
+            <a href="/pages/projects.html">Projects</a>
+            <a href="/pages/talks.html">Talks</a>
+            <a href="/pages/teaching.html">Teaching</a>
+            <a href="/pages/blog.html">Blog</a>
+            <a href="/pages/resume.html">Resume</a>
+        </nav>
+        <div class="lang-switch">
+            <a href="/vi/" class="btn-lang">Vietnamese</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </header>
 
-  <!-- Main layout -->
-  <div class="layout">
-    <!-- Left sidebar -->
-    <aside class="sidebar">
-      <div class="avatar"></div>
-      <div class="sidebar-name">Your Sidebar Name</div>
-      <div class="sidebar-bio">
-        Short biography for the left-hand sidebar
-      </div>
-      <ul class="sidebar-list">
-        <li>🌍 Earth</li>
-        <li>🏫 Red Brick University</li>
-        <li>✉️ Email</li>
-        <li>🔎 Google Scholar</li>
-        <li>🧬 ORCID</li>
-        <li>📚 PubMed</li>
-        <li>🐙 GitHub</li>
-        <li>🦋 Bluesky</li>
-      </ul>
-    </aside>
+    <section class="home"id="home">
 
-    <!-- Right content -->
-    <main class="content">
-      <h1>CV</h1>
+        <div class="home-img">
+              <img src="images/avatar.jpg" alt="" class="">
+        </div>
+        
+        <div class="home-content">
+            <h1>It's <span>Phan Loc</span></h1>
+            <h3 class="text-animation">
+                I'm a <span></span>
+            </h3>
 
-      <h2>Education</h2>
-      <ul>
-        <li>Ph.D in Version Control Theory, GitHub University, 2018 (expected)</li>
-        <li>M.S. in Jekyll, GitHub University, 2014</li>
-        <li>B.S. in GitHub, GitHub University, 2012</li>
-      </ul>
+            <p> I am currently in my final year at FPT University in Ho Chi Minh City, and I am looking for an internship with the possibility of a full-time position afterwards.
+                My research areas are Natural Language Processing, Computer Vision, and Deep Learning. 
+                My interests lie in Visual Question Answering, Relationship Extraction, and summarization. 
+                </p>
+            
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.facebook.com/zone2k1/" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://github.com/imxzone" target="_blank"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.youtube.com/@imxzone" target="_blank"><i class='bx bxl-youtube'></i></a>
 
-      <h2>Work experience</h2>
+            </div>
+            <a href="#" class="btn">Hire Me</a>
+        </div>
+    </section>
 
-      <h3>Spring 2024: Academic Pages Collaborator</h3>
-      <ul>
-        <li>GitHub University</li>
-        <li>Duties include: Updates and improvements to template</li>
-        <li>Supervisor: The Users</li>
-      </ul>
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3 class="text-animation">
+                <span></span>
+            </h3>
+            <p>
+                My life philosophy is to face challenges confidently because I always prepare for them.
+            </p>
+            <a href="#"class="btn"> Read More </a>
+        </div>
+        <div class="about-img">
+              <img src="images/imxzone.jpg" alt="">
+        </div>
+    </section>
 
-      <h3>Fall 2015: Research Assistant</h3>
-      <ul>
-        <li>GitHub University</li>
-        <li>Duties included: Merging pull requests</li>
-        <li>Supervisor: Professor Hub</li>
-      </ul>
+    <section class="services" id="services">
+        <h2 class="heading">Projects</h2>
 
-      <h3>Summer 2015: Research Assistant</h3>
-      <ul>
-        <li>GitHub University</li>
-        <li>Duties included: …</li>
-      </ul>
-    </main>
-  </div>
+        <div class="services-container">
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>Data Science</h4>
+                    <p>tao la mot thang datanalyst</p>
+                </div>
+            </div>
 
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>GD</h4>
+                    <p>tao la mot thang datanalyst</p>
+                </div>
+            </div>
+
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>DS</h4>
+                    <p>tao la mot thang datanalyst</p>
+                </div>
+            </div>
+
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>DE</h4>
+                    <p>tao la mot thang dataanalyst</p>
+                </div>
+            </div>
+
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>AE</h4>
+                    <p>tao la mot thang datanalyst</p>
+                </div>
+            </div>
+
+            <div class="services-box">
+                <div class="services-info">
+                    <h4>AE</h4>
+                    <p>tao la mot thang datanalyst</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full name">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Phone Number">
+                <input type="text" placeholder="Subject">
+            </div>
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-facebook' ></i></a>
+            <a href="#"><i class='bx bxl-github' ></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+    
+            <li>
+                <a href="#">Services</a>
+            </li>
+            
+            <li>
+                <a href="#">About Me</a>  
+            </li>
+    
+            <li>
+                <a href="#">Contact</a>
+            </li>
+    
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            
+        </ul>
+        <p class="copyright">
+            @ Phan Loc | All Rights Reserved
+        </p>
+        
+    </footer>
+
+    
+
+
+    <script src="scrip.js"></script>
 </body>
 </html>

@@ -99,7 +99,7 @@ permalink: /publications/
 
       <div class="pub-list">
         {% for pub in site.data.publications %}
-          <div class="pub-item">
+          <!-- <div class="pub-item">
             <h3 class="pub-title">
               {% if pub.link %}
                 <a href="{{ pub.link }}" target="_blank" rel="noopener">
@@ -151,7 +151,66 @@ permalink: /publications/
                 {% endif %}
               </p>
             {% endif %}
-          </div>
+          </div> -->
+        <div class="pub-item">
+        <!-- 1) Title -->
+        <h3 class="pub-title">
+          {% if pub.link %}
+            <a href="{{ pub.link }}" target="_blank" rel="noopener">
+              {{ pub.title }}
+            </a>
+          {% else %}
+            {{ pub.title }}
+          {% endif %}
+        </h3>
+
+        <!-- 2) Authors (1 dòng riêng) -->
+        {% if pub.authors %}
+          <p class="pub-authors"><strong>{{ pub.authors }}</strong></p>
+        {% endif %}
+
+        <!-- 3) Venue + Year (1 dòng riêng) -->
+        {% if pub.venue or pub.year %}
+          <p class="pub-venue">
+            {% if pub.venue %}{{ pub.venue }}{% endif %}
+            {% if pub.venue and pub.year %} · {% endif %}
+            {% if pub.year %}{{ pub.year }}{% endif %}
+          </p>
+        {% endif %}
+
+        <!-- 4) Tags -->
+        {% if pub.tags %}
+          <p class="pub-tags">
+            {% for tag in pub.tags %}
+              <span class="pub-tag">{{ tag }}</span>
+            {% endfor %}
+          </p>
+        {% endif %}
+
+        <!-- 5) Description: giới hạn 4-5 dòng + ... -->
+        {% if pub.description %}
+          <p class="pub-desc clamp-5">
+            {{ pub.description }}
+          </p>
+        {% endif %}
+
+        {% if pub.pdf or pub.code or pub.slides %}
+          <p class="pub-links">
+            {% if pub.pdf %}
+              <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
+            {% endif %}
+            {% if pub.code %}
+              {% if pub.pdf %} · {% endif %}
+              <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
+            {% endif %}
+            {% if pub.slides %}
+              {% if pub.pdf or pub.code %} · {% endif %}
+              <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+
         {% endfor %}
       </div>
     </div>
