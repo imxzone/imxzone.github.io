@@ -9,10 +9,10 @@
 
 - title: "AI-Face-Recognition-Check-in-System"
   description: "A real-time event check-in system using AI-based face recognition from a webcam, optimized for Edge (CPU) environments."
-  github: ""
+  github: "https://github.com/imxzone/AI-Face-Recognition-Check-in-System"
   tags: ["Face Recognition", "Event Check-in", "Real-time", "Edge AI"]
   tech: "Python · InsightFace · OpenCV · NumPy · Pandas"
-  image: "/images/projects/AI-Face-Recognition-Check-in-System.png"
+  image: ""
   star: true
 
 - title: "project 3"
