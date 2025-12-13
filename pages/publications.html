@@ -49,36 +49,6 @@ permalink: /publications/
           {% endif %}
         </ul>
 
-        <ul class="sidebar-links">
-          {% if author.links.linkedin %}
-          <li>
-            <i class="bx bxl-linkedin"></i>
-            <a href="{{ author.links.linkedin }}" target="_blank">LinkedIn</a>
-          </li>
-          {% endif %}
-
-          {% if author.links.github %}
-          <li>
-            <i class="bx bxl-github"></i>
-            <a href="{{ author.links.github }}" target="_blank">GitHub</a>
-          </li>
-          {% endif %}
-
-          {% if author.links.youtube %}
-          <li>
-            <i class="bx bxl-youtube"></i>
-            <a href="{{ author.links.youtube }}" target="_blank">YouTube</a>
-          </li>
-          {% endif %}
-
-          {% if author.links.facebook %}
-          <li>
-            <i class="bx bxl-facebook"></i>
-            <a href="{{ author.links.facebook }}" target="_blank">Facebook</a>
-          </li>
-          {% endif %}
-        </ul>
-
       </div>
     </aside>
 
@@ -108,9 +78,11 @@ permalink: /publications/
               {% if pub.authors %}
                 <strong>{{ pub.authors }}</strong>
               {% endif %}
+
               {% if pub.venue %}
-                – {{ pub.venue }}
+                - {{ pub.venue }}
               {% endif %}
+
               {% if pub.year %}
                 , {{ pub.year }}
               {% endif %}
@@ -136,11 +108,9 @@ permalink: /publications/
                   <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
                 {% endif %}
                 {% if pub.code %}
-                  {% if pub.pdf %} · {% endif %}
                   <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
                 {% endif %}
                 {% if pub.slides %}
-                  {% if pub.pdf or pub.code %} · {% endif %}
                   <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
                 {% endif %}
               </p>

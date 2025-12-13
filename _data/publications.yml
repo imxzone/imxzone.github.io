@@ -1,3 +1,11 @@
+- title: "Denoising Fourier Noise using REDNet in Image"
+  authors: "Loc Minh Phan, Thinh Tan Hung Duong"
+  venue: "Proceedings of the 2024 9th International Conference on Intelligent Information Technology"
+  year: 2024
+  description: "Fourier noise, often referred to as frequency domain noise, is a particular kind of interference or noise that affects data, pictures, audio, and digital signals in the frequency domain. The Fourier transform—a basic mathematical tool for the study and manipulation of signals in the frequency domain—was invented by renowned mathematician and scientist Jean-Baptiste Joseph Fourier, who is honored by the name of this noise. However, existing method for denoising Fourier Noise such as FFT has a significant drawback. FFT can not automatically denoise Fourier, we have to adjust it. Therefore, this method still not the best solution for denoising Fourier Noise. To address this challenge, our study proposes a novel approach that is Residual Encoder-Decoder Network(REDNet). It is a deep neural network architecture developed specifically for problems involving picture restoration, particularly denoising. The result have PSNR, MSE are 5,72 and 104,52 respectively. These result indicated REDNet is designed for denoising image and work well on denoising Fourier."
+  link: "https://dl.acm.org/doi/10.1145/3654522.3654569"
+  tags: ["Image Denoising", "Deep Learning", "Fourier Noise", "Computer Vision"]
+
 # - title: "Paper Title"
 #   authors: "Phan Loc, Co-author"
 #   venue: "Journal 1"
@@ -8,12 +16,3 @@
 #   code: "https://github.com/username/paper3-code"  # optional
 #   slides: "files/paper3-slides.pdf"    # optional
 #   tags: ["NLP", "Deep Learning"]
-
-- title: "Denoising Fourier Noise using REDNet in Image"
-  authors: "Loc Minh Phan, Thinh Tan Hung Duong"
-  venue: "Proceedings of the 2024 9th International Conference on Intelligent Information Technology"
-  year: 2024
-  description: "Fourier noise, often referred to as frequency domain noise, is a particular kind of interference or noise that affects data, pictures, audio, and digital signals in the frequency domain. The Fourier transform—a basic mathematical tool for the study and manipulation of signals in the frequency domain—was invented by renowned mathematician and scientist Jean-Baptiste Joseph Fourier, who is honored by the name of this noise. However, existing method for denoising Fourier Noise such as FFT has a significant drawback. FFT can not automatically denoise Fourier, we have to adjust it. Therefore, this method still not the best solution for denoising Fourier Noise. To address this challenge, our study proposes a novel approach that is Residual Encoder-Decoder Network(REDNet). It is a deep neural network architecture developed specifically for problems involving picture restoration, particularly denoising. The result have PSNR, MSE are 5,72 and 104,52 respectively. These result indicated REDNet is designed for denoising image and work well on denoising Fourier."
-  link: "https://dl.acm.org/doi/10.1145/3654522.3654569"
-  tags: ["Image Denoising", "Deep Learning", "Fourier Noise", "Computer Vision"]
-

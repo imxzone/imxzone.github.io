@@ -168,11 +168,32 @@
   margin-bottom: 0.5rem;
 }
 
-.pub-links a {
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: var(--main-color);
+.pub-links{
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  padding: 0;
 }
+
+.pub-links a{
+  display: inline-block !important;
+  width: auto !important;   
+  max-width: fit-content;
+  
+  font-size: 1.1rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-links a:hover{
+  background: rgba(255,255,255,0.12);
+}
+
 
 @media (max-width: 900px) {
   .publications-section {

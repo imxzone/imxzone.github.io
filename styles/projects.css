@@ -168,10 +168,29 @@
   margin-bottom: 0.5rem;
 }
 
+.pub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
 .pub-links a {
-  font-size: 1.3rem;
-  text-decoration: none;
+  display: inline-block;
+  font-size: 1.35rem;
+  font-weight: 500;
   color: var(--main-color);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  transition: all 0.25s ease;
+}
+
+.pub-links a:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateX(3px);
+  text-decoration: underline;
 }
 
 @media (max-width: 900px) {
