@@ -13,7 +13,9 @@
 - title: "Fourier Noise Denoising using REDNet"
   priority: 10
   year: 2024
-  description: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+  description: 
+    en: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+    vi: ""
   type: ["Undergraduate Project", "AI Project"]
   tags: ["NLP", "RAG", "FAISS"]
   tech: "Python · PyTorch · FAISS"
@@ -25,7 +27,9 @@
 - title: "AI Face Recognition Check-in System"
   priority: 20
   year: 2025
-  description: "A real-time event check-in system using AI-based face recognition from a webcam, optimized for Edge (CPU) environments."
+  description: 
+    en: "A real-time event check-in system using AI-based face recognition from a webcam, optimized for Edge (CPU) environments."
+    vi: ""
   type: ["Undergraduate Project", "AI Project"]
   tags: ["Face Recognition", "Event Check-in", "Real-time"]
   tech: "Python · InsightFace · OpenCV · NumPy · Pandas"

@@ -98,7 +98,7 @@ permalink: /publications/
 
             {% if pub.description %}
               <p class="pub-desc">
-                {{ pub.description }}
+                {{ pub.description[page.lang] | default: pub.description.en }}
               </p>
             {% endif %}
 
