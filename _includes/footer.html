@@ -3,26 +3,18 @@
 <footer class="footer">
     <div class="social">
         {% if author.social.linkedin %}
-        <a href="{{ author.social.linkedin }}"><i class='bx bxl-linkedin'></i></a>
+        <a href="{{ author.social.linkedin }}" target="_blank" ><i class='bx bxl-linkedin'></i></a>
         {% endif %}
         {% if author.social.facebook %}
-        <a href="{{ author.social.facebook }}"><i class='bx bxl-facebook'></i></a>
+        <a href="{{ author.social.facebook }}" target="_blank" ><i class='bx bxl-facebook'></i></a>
         {% endif %}
         {% if author.social.github %}
-        <a href="{{ author.social.github }}"><i class='bx bxl-github'></i></a>
+        <a href="{{ author.social.github }}" target="_blank" ><i class='bx bxl-github'></i></a>
         {% endif %}
         {% if author.social.youtube %}
-        <a href="{{ author.social.youtube }}"><i class='bx bxl-youtube'></i></a>
+        <a href="{{ author.social.youtube }}" target="_blank" ><i class='bx bxl-youtube'></i></a>
         {% endif %}
     </div>
-
-    <ul class="list">
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-    </ul>
 
     <p class="copyright">
         @ {{ author.name }} | All Rights Reserved

@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Projects – Phan Loc"
+title: "Projects"
 permalink: /projects/
+lang: en
 ---
 
 {% assign author = site.data.author %}
@@ -48,43 +49,6 @@ permalink: /projects/
           </li>
           {% endif %}
         </ul>
-
-        <ul class="sidebar-links">
-          {% if author.links.scholar %}
-          <li>
-            <i class="bx bxl-google"></i>
-            <a href="{{ author.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
-          </li>
-          {% endif %}
-
-          {% if author.links.orcid %}
-          <li>
-            <i class="bx bx-id-card"></i>
-            <a href="{{ author.links.orcid }}" target="_blank" rel="noopener">ORCID</a>
-          </li>
-          {% endif %}
-
-          {% if author.links.pubmed %}
-          <li>
-            <i class="bx bx-book-open"></i>
-            <a href="{{ author.links.pubmed }}" target="_blank" rel="noopener">PubMed</a>
-          </li>
-          {% endif %}
-
-          {% if author.links.github %}
-          <li>
-            <i class="bx bxl-github"></i>
-            <a href="{{ author.links.github }}" target="_blank" rel="noopener">GitHub</a>
-          </li>
-          {% endif %}
-
-          {% if author.links.bluesky %}
-          <li>
-            <i class="bx bx-cloud"></i>
-            <a href="{{ author.links.bluesky }}" target="_blank" rel="noopener">Bluesky</a>
-          </li>
-          {% endif %}
-        </ul>
       </div>
     </aside>
 
@@ -96,62 +60,66 @@ permalink: /projects/
         Here is a selection of my research work and technical writings in AI,
         including Natural Language Processing, Computer Vision, and Deep Learning.
       </p>
-
       <div class="pub-list">
-        {% for pub in site.data.projects %}
-          <div class="pub-item">
-            <h3 class="pub-title">
-              {% if pub.link %}
-                <a href="{{ pub.link }}" target="_blank" rel="noopener">
-                  {{ pub.title }}
-                </a>
-              {% else %}
-                {{ pub.title }}
-              {% endif %}
-            </h3>
+        {% assign year_groups = site.data.projects | group_by: "year" | sort: "name" | reverse %}
 
-            <p class="pub-meta">
-              {% if pub.authors %}
-                <strong>{{ pub.authors }}</strong>
-              {% endif %}
-              {% if pub.venue %}
-                – {{ pub.venue }}
-              {% endif %}
-              {% if pub.year %}
-                , {{ pub.year }}
-              {% endif %}
-            </p>
+        {% for year in year_groups %}
+          {% assign items_sorted = year.items | sort: "title" | sort: "priority" | reverse %}
 
-            {% if pub.tags %}
-              <p class="pub-tags">
-                {% for tag in pub.tags %}
-                  <span class="pub-tag">{{ tag }}</span>
-                {% endfor %}
-              </p>
-            {% endif %}
+          {% for pub in items_sorted %}
+            {% if pub.type and pub.type contains "AI Project" %}
+              <div class="pub-item">
+                <h3 class="pub-title">
+                  {% if pub.link %}
+                    <a href="{{ pub.link }}" target="_blank" rel="noopener">
+                      {{ pub.title }}
+                    </a>
+                  {% else %}
+                    {{ pub.title }}
+                  {% endif %}
+                </h3>
 
-            {% if pub.description %}
-              <p class="pub-desc">
-                {{ pub.description }}
-              </p>
-            {% endif %}
+                <p class="pub-meta">
+                  {% if pub.type %}
+                    <strong>{{ pub.type | join: " · " }}</strong>
+                  {% endif %}
+                  {% if pub.year %}
+                    {% if pub.type %} — {% endif %}{{ pub.year }}
+                  {% endif %}
+                </p>
 
-            {% if pub.pdf or pub.code or pub.slides %}
-              <p class="pub-links">
-                {% if pub.pdf %}
-                  <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
+                {% if pub.tags %}
+                  <p class="pub-tags">
+                    {% for tag in pub.tags %}
+                      <span class="pub-tag">{{ tag }}</span>
+                    {% endfor %}
+                  </p>
                 {% endif %}
-                {% if pub.code %}
-                  {% if pub.pdf %} · {% endif %}
-                  <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
+
+                {% if pub.description %}
+                  <p class="pub-desc">
+                    {{ pub.description }}
+                  </p>
                 {% endif %}
-                {% if pub.slides %}
-                  {% if pub.pdf or pub.code %} · {% endif %}
-                  <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
+
+                {% if pub.pdf or pub.code or pub.slides %}
+                  <p class="pub-links">
+                    {% if pub.pdf %}
+                      <a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>
+                    {% endif %}
+                    {% if pub.code %}
+                      {% if pub.pdf %} · {% endif %}
+                      <a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>
+                    {% endif %}
+                    {% if pub.slides %}
+                      {% if pub.pdf or pub.code %} · {% endif %}
+                      <a href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a>
+                    {% endif %}
+                  </p>
                 {% endif %}
-              </p>
+              </div>
             {% endif %}
-          </div>
+          {% endfor %}
         {% endfor %}
       </div>
     </div>

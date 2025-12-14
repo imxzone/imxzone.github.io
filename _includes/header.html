@@ -1,24 +1,54 @@
 {%- assign author = site.data.author -%}
 
+{%- assign lang = page.lang | default: "en" -%}
+
+{%- assign is_vi = false -%}
+{%- if lang == "vi" -%}
+  {%- assign is_vi = true -%}
+{%- endif -%}
+
+{%- if is_vi -%}
+  {%- assign switch_label = "English" -%}
+  {%- if page.url == "/vi/" -%}
+    {%- assign switch_url = "/" -%}
+  {%- else -%}
+    {%- assign switch_url = page.url | remove_first: "/vi" -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign switch_label = "Tiếng Việt" -%}
+  {%- if page.url == "/" -%}
+    {%- assign switch_url = "/vi/" -%}
+  {%- else -%}
+    {%- assign switch_url = "/vi" | append: page.url -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign nav_items = site.data.navigation.main[lang] -%}
+
 <header class="header">
-    <a href="{{ "/" | relative_url }}" class="logo">
-        {{ author.name }}
-        <span>{{ author.nickname }}</span>
+  <a href="{% if is_vi %}{{ '/vi/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="logo">
+    {{ author.name }}
+    <span>{{ author.nickname }}</span>
+  </a>
+
+  <i class="bx bx-menu" id="menu-icon"></i>
+
+  <nav class="navbar">
+    {% for item in nav_items %}
+      <a href="{{ item.url | relative_url }}"
+         class="{% if page.url == item.url %}active{% endif %}">
+        {{ item.title }}
+      </a>
+    {% endfor %}
+  </nav>
+
+  <div class="lang-switch">
+    <a href="{{ switch_url | relative_url }}" class="btn-lang">
+      {{ switch_label }}
     </a>
-    
-    <i class="bx bx-menu" id="menu-icon"></i>
+  </div>
 
-    <nav class="navbar">
-        {% for item in site.data.navigation.main %}
-            <a href="{{ item.url | relative_url }}"
-               class="{% if page.url == item.url %}active{% endif %}">
-                {{ item.title }}
-            </a>
-        {% endfor %}
-    </nav>
-
-    <div class="lang-switch">
-        <a href="/vi/" class="btn-lang">Vietnamese</a>
-    </div>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    🌙
+  </button>
 </header>

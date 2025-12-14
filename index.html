@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Home
+title: "Home"
 permalink: /
+lang: en
 ---
 
 <section class="home" id="home">
@@ -44,7 +45,7 @@ permalink: /
             <span></span>
         </h3>
         <p>
-            {{ site.data.author.bio }}
+            {{ site.data.author.bio[page.lang] }}
         </p>
         <a href="/pages/about.html" class="btn"> Read More </a>
     </div>
@@ -54,8 +55,7 @@ permalink: /
 </section>
 
 <section class="services" id="services">
-    <h2 class="heading">Projects</h2>
-
+    <h2 class="heading">My <span>Projects</span></h2>
     <div class="services-container">
         {%- assign top_projects = site.data.projects | where: "star", true -%}
 
@@ -76,8 +76,8 @@ permalink: /
                 <p class="project-tech">{{ project.tech }}</p>
                 {% endif %}
 
-                {% if project.github %}
-                    <a href="{{ project.github }}" target="_blank" class="btn">View Details</a>
+                {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank" class="btn">View Details</a>
                 {% endif %}
             </div>
 
@@ -86,7 +86,7 @@ permalink: /
     </div>
 </section>
 
-<section class="contact" id="contact">
+<!-- <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me</span></h2>
 
     <form action="#">
@@ -102,9 +102,9 @@ permalink: /
         <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
         <input type="submit" value="Send Message" class="btn">
     </form>
-</section>
+</section> -->
 
 <!-- bundle install -->
-<!-- bundle exec jekyll clean
-bundle exec jekyll serve -->
+<!-- bundle exec jekyll clean -->
+<!-- bundle exec jekyll serve -->
 <!-- bundle exec jekyll serve --livereload -->

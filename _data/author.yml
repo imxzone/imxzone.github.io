@@ -7,15 +7,17 @@ tagline: "I'm a final-year student at FPT University, focusing on AI and Data."
 avatar: "/images/avatar.jpg"
 about_image: "/images/image1.jpg"
 
-bio: >
-  I am a Bachelor of Artificial Intelligence from 
-  <a href="https://daihoc.fpt.edu.vn/hcm/" class="affiliation-link" target="_blank">
-    FPT University Ho Chi Minh City
-  </a>, 
-  And Founder of 9.5AI Club FPTU HCMC.
-  My research focuses on Natural Language Processing, Computer Vision, and Deep Learning. 
-  I am particularly interested in Visual Question Answering, Relationship Extraction, and text summarization, aiming to develop AI systems that connect academic research with real-world applications.
-
+bio: 
+  en: >
+    I am a Bachelor of Artificial Intelligence from 
+    <a href="https://daihoc.fpt.edu.vn/hcm/" class="affiliation-link" target="_blank">
+      FPT University Ho Chi Minh City
+    </a>, 
+    And Founder of 9.5AI Club FPTU HCMC.
+    My research focuses on Natural Language Processing, Computer Vision, and Deep Learning. 
+    I am particularly interested in Visual Question Answering, Relationship Extraction, and text summarization, aiming to develop AI systems that connect academic research with real-world applications.
+  vi: >
+    abc
 quote: "My life philosophy is to face challenges confidently because I always prepare for them."
 
 social:

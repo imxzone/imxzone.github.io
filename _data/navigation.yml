@@ -1,13 +1,30 @@
 main:
-  - title: "Publications"
-    url: "/publications/"
-  - title: "Projects"
-    url: "/projects/"
-  - title: "Talks"
-    url: "/talks/"
-  - title: "Teaching"
-    url: "/teaching/"
-  - title: "Blog"
-    url: "/blog/"
-  - title: "Resume"
-    url: "/resume/"
+  en:
+    - title: Home
+      url: /
+    - title: Publications
+      url: /publications/
+    - title: Projects
+      url: /projects/
+    - title: Teaching
+      url: /teaching/
+    - title: Talks
+      url: /talks/
+    - title: Blog
+      url: /blog/
+    - title: Resume
+      url: /resume/
+
+  vi:
+    - title: Trang chủ
+      url: /vi/
+    - title: Dự án
+      url: /vi/projects/
+    - title: Giảng dạy
+      url: /vi/teaching/
+    - title: Bài nói chuyện
+      url: /vi/talks/
+    - title: Blog
+      url: /vi/blog/
+    - title: CV
+      url: /vi/resume/
