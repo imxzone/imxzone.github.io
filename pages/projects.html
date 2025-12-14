@@ -24,7 +24,7 @@ lang: en
 
         <h3 class="sidebar-name">{{ author.name }}</h3>
         <p class="sidebar-bio">
-          {{ author.sidebar_bio | default: author.bio }}
+          {{ author.sidebar_bio | default: author.bio[page.lang] }}
         </p>
 
         <ul class="sidebar-meta">
