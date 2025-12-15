@@ -10,7 +10,7 @@
   tags: ["NLP", "RAG", "FAISS"]
   tech: "Python · PyTorch · FAISS"
   media:
-    cover: "/images/projects/Fourier Noise Denoising using REDNet.png"
+    cover: "/images/teaching/ai_fptu/PFP191.png"
     image: ""
   demo: ""
   link: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
