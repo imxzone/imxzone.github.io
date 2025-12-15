@@ -19,4 +19,3 @@ slug: rise_space_season_2
 ...nội dung...
 
 ## Hình ảnh
-<img src="/images/teaching/python/01.jpg" />
