@@ -4,4 +4,188 @@ title: "Teaching"
 permalink: /teaching/
 ---
 
-{% assign author = site.data.author %}
+<section class="services" id="services">
+    <h2 class="heading">My <span>Teaching</span></h2>
+    <div class="services-container">
+        {%- assign top_projects = site.data.projects | where: "star", true -%}
+
+        {%- for project in top_projects limit:6 -%}
+        <div class="services-box">
+
+            {% if project.image %}
+            <div class="project-image-wrapper">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
+            </div>
+            {% endif %}
+
+            <div class="services-info">
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.description[page.lang] }}</p>
+
+                {% if project.tech %}
+                <p class="project-tech">{{ project.tech }}</p>
+                {% endif %}
+
+                {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank" class="btn">View Details</a>
+                {% endif %}
+            </div>
+
+        </div>
+        {%- endfor -%}
+    </div>
+</section>
+
+<!-- <section class="services" id="services">
+    <h2 class="heading">AI @ <span>FPTU HCMC</span></h2>
+    <div class="services-container">
+        {%- assign top_projects = site.data.projects | where: "star", true -%}
+
+        {%- for project in top_projects limit:6 -%}
+        <div class="services-box">
+
+            {% if project.image %}
+            <div class="project-image-wrapper">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
+            </div>
+            {% endif %}
+
+            <div class="services-info">
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.description[page.lang] }}</p>
+
+                {% if project.tech %}
+                <p class="project-tech">{{ project.tech }}</p>
+                {% endif %}
+
+                {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank" class="btn">View Details</a>
+                {% endif %}
+            </div>
+
+        </div>
+        {%- endfor -%}
+    </div>
+</section> -->
+
+<section class="services" id="services">
+  <h2 class="heading">AI @ <span>FPTU HCMC</span></h2>
+  <div class="services-container">
+
+    {% assign lang = page.lang | default: "en" %}
+
+    {%- assign ai_items = site.data.ai_fptu -%}
+    {%- assign ai_items = ai_items | sort: "priority" | reverse -%}
+    {%- assign ai_items = ai_items | sort: "date" | reverse -%}
+
+    {%- for item in ai_items limit:6 -%}
+      <div class="services-box">
+
+        {% if item.media and item.media.cover %}
+          <div class="project-image-wrapper">
+            <img src="{{ item.media.cover | relative_url }}" alt="{{ item.title }}" class="project-image">
+          </div>
+        {% endif %}
+
+        <div class="services-info">
+          <h4>{{ item.title[lang] }}</h4>
+
+          {% assign desc = item.description[lang] | default: item.description.en | default: item.description.vi %}
+          {% if desc %}
+            <p>{{ desc }}</p>
+          {% endif %}
+
+          {% if item.level %}
+            <p class="project-tech">{{ item.level }}</p>
+          {% endif %}
+
+          {% if item.links and item.links.url %}
+            {% assign url = item.links.url %}
+            {% assign is_external = false %}
+            {% if url contains "http://" or url contains "https://" %}
+              {% assign is_external = true %}
+            {% endif %}
+
+            <a
+              href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}"
+              class="btn"
+              {% if is_external %}target="_blank" rel="noopener"{% endif %}>
+              View Details
+            </a>
+          {% endif %}
+        </div>
+
+      </div>
+    {%- endfor -%}
+
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2 class="heading">AI @ <span>FPTU HCMC</span></h2>
+
+  {% assign lang = page.lang | default: "en" %}
+
+  {%- assign ai_items = site.data.ai_fptu -%}
+  {%- assign ai_items = ai_items | sort: "priority" | reverse -%}
+  {%- assign ai_items = ai_items | sort: "date" | reverse -%}
+
+  {%- for sem in (1..5) -%}
+    {%- assign sem_str = sem | append: "" -%}
+
+    {%- assign sem_items = "" | split: "" -%}
+    {%- for it in ai_items -%}
+      {%- assign it_sem = it.semester | append: "" -%}
+      {%- if it_sem == sem_str -%}
+        {%- assign sem_items = sem_items | push: it -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if sem_items.size > 0 -%}
+      <h3 class="semester-title">Semester {{ sem }}</h3>
+
+      <div class="services-container semester-grid-5">
+        {%- for item in sem_items -%}
+          <div class="services-box">
+
+            {% if item.media and item.media.cover %}
+              <div class="project-image-wrapper">
+                <img src="{{ item.media.cover | relative_url }}" alt="{{ item.title }}" class="project-image">
+              </div>
+            {% endif %}
+
+            <div class="services-info">
+              <h4>{{ item.title[lang] }}</h4>
+
+              {% assign desc = item.description[lang] | default: item.description.en | default: item.description.vi %}
+              {% if desc %}
+                <p>{{ desc }}</p>
+              {% endif %}
+
+              {% if item.level %}
+                <p class="project-tech">{{ item.level }}</p>
+              {% endif %}
+
+              {% if item.links and item.links.url %}
+                {% assign url = item.links.url %}
+                {% assign is_external = false %}
+                {% if url contains "http://" or url contains "https://" %}
+                  {% assign is_external = true %}
+                {% endif %}
+
+                <a
+                  href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}"
+                  class="btn"
+                  {% if is_external %}target="_blank" rel="noopener"{% endif %}>
+                  View Details
+                </a>
+              {% endif %}
+            </div>
+
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+
+</section>

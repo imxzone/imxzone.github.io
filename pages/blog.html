@@ -5,3 +5,35 @@ permalink: /blog/
 ---
 
 {% assign author = site.data.author %}
+
+<section class="services" id="services">
+    <h2 class="heading">My <span>Projects</span></h2>
+    <div class="services-container">
+        {%- assign top_projects = site.data.projects | where: "star", true -%}
+
+        {%- for project in top_projects limit:6 -%}
+        <div class="services-box">
+
+            {% if project.image %}
+            <div class="project-image-wrapper">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
+            </div>
+            {% endif %}
+
+            <div class="services-info">
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.description[page.lang] }}</p>
+
+                {% if project.tech %}
+                <p class="project-tech">{{ project.tech }}</p>
+                {% endif %}
+
+                {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank" class="btn">View Details</a>
+                {% endif %}
+            </div>
+
+        </div>
+        {%- endfor -%}
+    </div>
+</section>

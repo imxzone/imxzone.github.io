@@ -1,0 +1,30 @@
+# - title: "Paper Title"
+#   authors: "Phan Loc, Co-author"
+#   type: "Conference"
+#   venue: "Journal 1"
+#   year: 2015
+#   description: "Short description of the work: problem, dataset, method, results…"
+#   link: "https://example.com/paper3"   # link tổng, optional
+#   pdf: "files/paper3.pdf"              # optional
+#   code: "https://github.com/username/paper3-code"  # optional
+#   slides: "files/paper3-slides.pdf"    # optional
+#   tags: ["NLP", "Deep Learning"]
+
+- title: "Rise Space Season 1"
+  date: "2025-03"
+  priority: 20
+  level: "Beginner"
+  role: "Instructor · 9.5AI Club – FPTU HCMC"
+  description:
+    en: "Beginner-friendly AI training program covering Python, ML fundamentals, and hands-on mini projects."
+    vi: "Chương trình đào tạo AI cho người mới, học Python, nền tảng ML và thực hành mini project."
+  duration: "5 day · 12 sessions"
+  tags: ["AI Education", "Python basic"]
+  media:
+    cover: "images/teaching/rise_space_season_1/cover.jpg"
+    gallery:
+      - "images/teaching/risespace-s1/01.jpg"
+      - "images/teaching/risespace-s1/02.jpg"
+  links:
+    repo: "https://github.com/95ai-club/risespace-s1"
+    slides: "files/risespace-s1-slides.pdf"
