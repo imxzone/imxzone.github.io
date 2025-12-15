@@ -11,7 +11,8 @@
 #   tags: ["NLP", "Deep Learning"]
 
 - title: "Rise Space Season 1"
-  date: "2025-03"
+  slug: "rise_space_season_1"
+  date: "2025-10"
   priority: 20
   level: "Beginner"
   role: "Instructor · 9.5AI Club – FPTU HCMC"
@@ -26,5 +27,25 @@
       - "images/teaching/risespace-s1/01.jpg"
       - "images/teaching/risespace-s1/02.jpg"
   links:
-    repo: "https://github.com/95ai-club/risespace-s1"
+    detail: "https://github.com/95ai-club/risespace-s1"
+    slides: "files/risespace-s1-slides.pdf"
+
+- title: "Rise Space Season 2"
+  slug: "rise_space_season_2"
+  date: "2025-12"
+  priority: 20
+  level: "Beginner"
+  role: "Instructor · 9.5AI Club – FPTU HCMC"
+  description:
+    en: "Beginner-friendly AI training program covering Python, ML fundamentals, and hands-on mini projects."
+    vi: "Chương trình đào tạo AI cho người mới, học Python, nền tảng ML và thực hành mini project."
+  duration: "5 day · 12 sessions"
+  tags: ["AI Education", "Python basic"]
+  media:
+    cover: "images/teaching/rise_space_season_1/cover.jpg"
+    gallery:
+      - "images/teaching/risespace-s1/01.jpg"
+      - "images/teaching/risespace-s1/02.jpg"
+  links:
+    detail: "https://github.com/95ai-club/risespace-s1"
     slides: "files/risespace-s1-slides.pdf"

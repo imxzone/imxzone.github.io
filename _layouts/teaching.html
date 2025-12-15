@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% assign item = site.data.teaching | where: "slug", page.slug | first %}
+
+<article class="teaching-detail">
+  <h1>{{ page.title }}</h1>
+
+  {% if item and item.media and item.media.cover %}
+    <img src="{{ item.media.cover | relative_url }}" alt="{{ page.title }}">
+  {% endif %}
+
+  {% if item %}
+    <p class="project-meta">
+      {{ item.role }} · {{ item.level }} · {{ item.duration }}
+    </p>
+
+    {% assign desc = item.description[page.lang] | default: item.description.en %}
+    {% if desc %}
+      <p>{{ desc }}</p>
+    {% endif %}
+
+    {% if item.tags %}
+      <p class="project-tech">{{ item.tags | join: " · " }}</p>
+    {% endif %}
+
+    <div class="project-links">
+      {% if item.links and item.links.detail %}
+        <a href="{{ item.links.detail }}" target="_blank" class="btn">Repo</a>
+      {% endif %}
+      {% if item.links and item.links.slides %}
+        <a href="{{ item.links.slides | relative_url }}" target="_blank" class="btn btn-outline">Slides</a>
+      {% endif %}
+    </div>
+
+    {% if item.media and item.media.gallery %}
+      <div class="gallery">
+        {% for img in item.media.gallery %}
+          <img src="{{ img | relative_url }}" alt="{{ page.title }} gallery">
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  <div class="content">
+    {{ content }}
+  </div>
+</article>

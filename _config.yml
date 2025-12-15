@@ -35,3 +35,8 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 timezone: Asia/Ho_Chi_Minh
+
+collections:
+  teaching:
+    output: true
+    permalink: /teaching/:name/

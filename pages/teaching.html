@@ -6,119 +6,62 @@ permalink: /teaching/
 
 <section class="services" id="services">
     <h2 class="heading">My <span>Teaching</span></h2>
-    <div class="services-container">
-        {%- assign top_projects = site.data.projects | where: "star", true -%}
 
-        {%- for project in top_projects limit:6 -%}
+    <div class="services-container">
+        {%- assign teaching_items = site.data.teaching
+            | sort: "priority"
+            | reverse
+        -%}
+
+        {%- for item in teaching_items -%}
         <div class="services-box">
 
-            {% if project.image %}
+            {% if item.media and item.media.cover %}
             <div class="project-image-wrapper">
-                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
+                <img 
+                    src="{{ item.media.cover | relative_url }}" 
+                    alt="{{ item.title }}" 
+                    class="project-image">
             </div>
             {% endif %}
 
             <div class="services-info">
-                <h4>{{ project.title }}</h4>
-                <p>{{ project.description[page.lang] }}</p>
+                <h4>{{ item.title }}</h4>
 
-                {% if project.tech %}
-                <p class="project-tech">{{ project.tech }}</p>
+                {% assign desc = item.description[page.lang] 
+                    | default: item.description.en 
+                %}
+                {% if desc %}
+                <p>{{ desc }}</p>
                 {% endif %}
 
-                {% if project.link %}
-                    <a href="{{ project.link }}" target="_blank" class="btn">View Details</a>
+                <p class="project-meta">
+                    {{ item.role }} · {{ item.level }} · {{ item.duration }}
+                </p>
+
+                {% if item.tags %}
+                <p class="project-tech">
+                    {{ item.tags | join: " · " }}
+                </p>
                 {% endif %}
+
+                <div class="project-links">
+                  {% assign doc = site.teaching | where: "slug", item.slug | first %}
+                  {% if doc %}
+                    <a href="{{ doc.url | relative_url }}" class="btn">View Details</a>
+                  {% else %}
+                    <a href="{{ '/teaching/' | append: item.slug | append: '/' | relative_url }}" class="btn">View Details</a>
+                  {% endif %}
+                    {% if item.links.slides %}
+                    <a href="{{ item.links.slides | relative_url }}" target="_blank" class="btn btn-outline">
+                        Slides
+                    </a>
+                    {% endif %}
+                </div>
             </div>
-
         </div>
         {%- endfor -%}
     </div>
-</section>
-
-<!-- <section class="services" id="services">
-    <h2 class="heading">AI @ <span>FPTU HCMC</span></h2>
-    <div class="services-container">
-        {%- assign top_projects = site.data.projects | where: "star", true -%}
-
-        {%- for project in top_projects limit:6 -%}
-        <div class="services-box">
-
-            {% if project.image %}
-            <div class="project-image-wrapper">
-                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-image">
-            </div>
-            {% endif %}
-
-            <div class="services-info">
-                <h4>{{ project.title }}</h4>
-                <p>{{ project.description[page.lang] }}</p>
-
-                {% if project.tech %}
-                <p class="project-tech">{{ project.tech }}</p>
-                {% endif %}
-
-                {% if project.link %}
-                    <a href="{{ project.link }}" target="_blank" class="btn">View Details</a>
-                {% endif %}
-            </div>
-
-        </div>
-        {%- endfor -%}
-    </div>
-</section> -->
-
-<section class="services" id="services">
-  <h2 class="heading">AI @ <span>FPTU HCMC</span></h2>
-  <div class="services-container">
-
-    {% assign lang = page.lang | default: "en" %}
-
-    {%- assign ai_items = site.data.ai_fptu -%}
-    {%- assign ai_items = ai_items | sort: "priority" | reverse -%}
-    {%- assign ai_items = ai_items | sort: "date" | reverse -%}
-
-    {%- for item in ai_items limit:6 -%}
-      <div class="services-box">
-
-        {% if item.media and item.media.cover %}
-          <div class="project-image-wrapper">
-            <img src="{{ item.media.cover | relative_url }}" alt="{{ item.title }}" class="project-image">
-          </div>
-        {% endif %}
-
-        <div class="services-info">
-          <h4>{{ item.title[lang] }}</h4>
-
-          {% assign desc = item.description[lang] | default: item.description.en | default: item.description.vi %}
-          {% if desc %}
-            <p>{{ desc }}</p>
-          {% endif %}
-
-          {% if item.level %}
-            <p class="project-tech">{{ item.level }}</p>
-          {% endif %}
-
-          {% if item.links and item.links.url %}
-            {% assign url = item.links.url %}
-            {% assign is_external = false %}
-            {% if url contains "http://" or url contains "https://" %}
-              {% assign is_external = true %}
-            {% endif %}
-
-            <a
-              href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}"
-              class="btn"
-              {% if is_external %}target="_blank" rel="noopener"{% endif %}>
-              View Details
-            </a>
-          {% endif %}
-        </div>
-
-      </div>
-    {%- endfor -%}
-
-  </div>
 </section>
 
 <section class="services" id="services">

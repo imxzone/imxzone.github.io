@@ -15,3 +15,39 @@
   demo: ""
   link: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
   star: true
+
+- title: 
+    en: "PFP191 - Programming Fundamentals with Python"
+    vi: "PFP191 - Cơ sở lập trình (với Python)"
+  priority: 10
+  semester: 1
+  description: 
+    en: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+    vi: ""
+  type: ["Undergraduate Project", "AI Project"]
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  media:
+    cover: "/images/teaching/ai_fptu/PFP191.png"
+    image: ""
+  demo: ""
+  link: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  star: true
+
+- title: 
+    en: "PFP191 - Programming Fundamentals with Python"
+    vi: "PFP191 - Cơ sở lập trình (với Python)"
+  priority: 10
+  semester: 2
+  description: 
+    en: "A Retrieval-Augmented Generation chatbot using PhoBERT + FAISS."
+    vi: ""
+  type: ["Undergraduate Project", "AI Project"]
+  tags: ["NLP", "RAG", "FAISS"]
+  tech: "Python · PyTorch · FAISS"
+  media:
+    cover: "/images/teaching/ai_fptu/PFP191.png"
+    image: ""
+  demo: ""
+  link: "https://github.com/imxzone/Denoising-Fourier-Noise-using-REDNet-in-Image"
+  star: true
