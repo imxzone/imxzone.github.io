@@ -138,3 +138,10 @@
   max-width: 900px;
   width: 100%;
 }
+
+.teaching-detail .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}

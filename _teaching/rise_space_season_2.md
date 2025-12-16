@@ -29,4 +29,12 @@ slug: rise_space_season_2
 
 - Định nghĩa sơ lược về phép gán:
 
+- Phép gán sử dụng toán tử `=`
+- Biến có thể thay đổi giá trị
+
+<div class="gallery">
+  <img src="{{ 'images/teaching/rise_space_season_2/Screenshot 2025-12-16 144222.png' | relative_url }}" />
+  <img src="{{ 'images/teaching/rise_space_season_2/Screenshot 2025-12-16 144340.png' | relative_url }}" />
+</div>
+
 ## Hình ảnh
