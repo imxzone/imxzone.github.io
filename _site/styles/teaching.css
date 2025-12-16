@@ -19,3 +19,122 @@
 @media (max-width: 600px){
   .semester-grid-5{ grid-template-columns: 1fr; }
 }
+
+/* ===== Teaching Detail Page ===== */
+
+.teaching-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8rem 1rem 6rem;
+}
+
+.teaching-detail h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.teaching-detail .project-meta {
+  opacity: 0.85;
+  margin-bottom: 1.2rem;
+}
+
+.teaching-detail .project-tech {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.teaching-detail img {
+  max-width: 100%;
+  border-radius: 14px;
+  margin: 1.5rem 0;
+}
+
+.teaching-detail .content {
+  line-height: 1.8;
+  margin-top: 2rem;
+}
+
+.teaching-detail h2,
+.teaching-detail h3 {
+  margin-top: 2.5rem;
+}
+
+.teaching-detail ul {
+  padding-left: 1.2rem;
+}
+
+.teaching-detail .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.teaching-detail .project-links {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* ===== Teaching Typography ===== */
+
+.teaching-detail .content {
+  font-size: 2rem;       /* ~18px */
+  line-height: 1.9;
+  color: #eaeaea;            /* nếu dark theme */
+}
+
+/* ===== Headings ===== */
+
+.teaching-detail h1 {
+  font-size: 3.2rem;         /* Title */
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.teaching-detail h2 {
+  font-size: 2.6rem;           /* Section */
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.teaching-detail h3 {
+  font-size: 2.4rem;         /* Sub-section */
+  font-weight: 600;
+  margin-top: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.teaching-detail h4 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-top: 1.8rem;
+}
+
+/* ===== Lists ===== */
+
+.teaching-detail ul,
+.teaching-detail ol {
+  font-size: 2rem;         /* ~17–18px */
+  line-height: 1.9;
+}
+
+.teaching-detail li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Code blocks (nếu có) ===== */
+
+.teaching-detail pre,
+.teaching-detail code {
+  font-size: 2rem;
+}
+
+.teaching-detail img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  width: 100%;
+}
