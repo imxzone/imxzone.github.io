@@ -100,7 +100,7 @@
   <li>Dữ liệu kiểu String &amp; các thao tác</li>
 </ul>
 
-<h2 id="lưu-ý-khi-viết-code">Lưu ý khi viết code</h2>
+<h2 id="1-lưu-ý-khi-viết-code">1. Lưu ý khi viết code</h2>
 <ul>
   <li>Indentaion: Thụt lùi đầu dòng là yếu tố “quan trọng”</li>
   <li>Độ dài tối đa của một đoạn code nên là 59 kí tự. Với dòng code dài thì dùng dấu \ rồi viết tiếp xuống dòng.</li>
@@ -109,13 +109,21 @@
   <li>Tên biến dùng chữ thương, tên hằng dùng chữ hoa.</li>
 </ul>
 
-<h2 id="nhậpxuất-dữ-liệu-với-python">Nhập/Xuất dữ liệu với Python</h2>
+<h2 id="2-nhậpxuất-dữ-liệu-với-python">2. Nhập/Xuất dữ liệu với Python</h2>
 <ul>
   <li>Nhập dữ liệu từ bàn phím: chuỗi, số, … với lệnh input()</li>
   <li>In dữ liệu ra màn hình với lệnh print()</li>
 </ul>
 
-<h3 id="biến--phép-gán">Biến &amp; phép gán</h3>
+<p>Ví dụ 2.1: Nhập dữ liệu &amp; in dữ liệu</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; loc
+#&gt;&gt; 'loc'
+</span></code></pre></div></div>
+
+<h2 id="3-biến--phép-gán">3. Biến &amp; phép gán</h2>
 <ul>
   <li>
     <p>Định nghĩa sơ lược về biến: Trường phái đầu tiên coi biến trong Python giống như một cái hộp để lưu trữ dữ liệu hoặc chuỗi mà bạn có thể lưu trữ vào biến và sử dụng nhiều lần. Kết quả của các phép xử lý như tính toán giá trị số, chỉnh sửa chuỗi ký tự sẽ tạm thời được giữ vào biến và dùng để sử dụng cho chương trình sau này.</p>
@@ -123,16 +131,475 @@
   <li>
     <p>Định nghĩa sơ lược về phép gán:</p>
   </li>
-  <li>Phép gán sử dụng toán tử <code class="language-plaintext highlighter-rouge">=</code></li>
+  <li>Phép gán sử dụng toán tử “=”</li>
   <li>Biến có thể thay đổi giá trị</li>
 </ul>
 
-<div class="gallery">
-  <img src="/images/teaching/rise_space_season_2/Screenshot%202025-12-16%20144222.png" />
-  <img src="/images/teaching/rise_space_season_2/Screenshot%202025-12-16%20144340.png" />
-</div>
+<h3 id="ví-dụ-1">Ví dụ 1:</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">price</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">price</span> <span class="o">=</span> <span class="mi">200</span>
 
-<h2 id="hình-ảnh">Hình ảnh</h2>
+<span class="k">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; 200
+</span></code></pre></div></div>
+
+<h3 id="ví-dụ-2">Ví dụ 2:</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="s">"Phan Lộc"</span>
+<span class="n">name</span> <span class="o">=</span> <span class="mi">2001</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; 2001
+</span></code></pre></div></div>
+
+<h2 id="4-dữ-liệu-kiểu-số--các-thao-tác">4. Dữ liệu kiểu Số &amp; các thao tác</h2>
+<ul>
+  <li>Số nguyên (integer)</li>
+  <li>Số thực (float)</li>
+  <li>Số phức (complex)</li>
+  <li>Ép kiểu</li>
+  <li>Kiểm tra kiểu bằng type()</li>
+</ul>
+
+<p>Ví dụ 4.1: Số nguyên</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">so_nguyen</span> <span class="o">=</span> <span class="mi">2001</span>
+<span class="k">print</span><span class="p">(</span><span class="n">so_nguyen</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">so_nguyen</span><span class="p">))</span>
+
+<span class="c1">#&gt;&gt; 2001
+#&gt;&gt; &lt;class 'int'&gt;
+</span></code></pre></div></div>
+
+<p>Ví dụ 4.2: Số thực</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">so_thuc</span> <span class="o">=</span> <span class="mf">3.6</span>
+<span class="k">print</span><span class="p">(</span><span class="n">so_thuc</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">so_thuc</span><span class="p">))</span>
+
+<span class="c1">#&gt;&gt; 3.6
+#&gt;&gt; &lt;class 'float'&gt;
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">so_thuc</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">print</span><span class="p">(</span><span class="n">so_thuc</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">so_thuc</span><span class="p">))</span>
+
+<span class="c1">#&gt;&gt; 4
+#&gt;&gt; &lt;class 'int'&gt;
+</span></code></pre></div></div>
+
+<h2 id="các-toán-tử-số-học-trong-python">Các toán tử số học trong Python</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Mô tả</th>
+      <th>Cú pháp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+</code></td>
+      <td>Cộng hai toán hạng</td>
+      <td><code class="language-plaintext highlighter-rouge">x + y</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-</code></td>
+      <td>Trừ hai toán hạng</td>
+      <td><code class="language-plaintext highlighter-rouge">x - y</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*</code></td>
+      <td>Nhân hai toán hạng</td>
+      <td><code class="language-plaintext highlighter-rouge">x * y</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/</code></td>
+      <td>Chia (kết quả số thực)</td>
+      <td><code class="language-plaintext highlighter-rouge">x / y</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">//</code></td>
+      <td>Chia lấy phần nguyên</td>
+      <td><code class="language-plaintext highlighter-rouge">x // y</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%</code></td>
+      <td>Chia lấy dư</td>
+      <td><code class="language-plaintext highlighter-rouge">x % y</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">**</code></td>
+      <td>Lũy thừa</td>
+      <td><code class="language-plaintext highlighter-rouge">x ** y</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ví dụ 4.3: Các phép toán tử</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">so_a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">so_b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; 7
+#&gt;&gt; 3
+#&gt;&gt; 10
+#&gt;&gt; 2.5
+#&gt;&gt; 2
+#&gt;&gt; 1
+#&gt;&gt; 25
+</span></code></pre></div></div>
+
+<h2 id="5-dữ-liệu-kiểu-boolean--các-thao-tác">5. Dữ liệu kiểu Boolean &amp; các thao tác</h2>
+<ul>
+  <li>True/False</li>
+  <li>Not operator</li>
+</ul>
+
+<p>Ví dụ 5.1: True/False &amp; Not operator</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">thi_pass</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">khong_thi_pass</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">thi_pass</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">thi_pass</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">khong_thi_pass</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; True
+#&gt;&gt; False
+</span></code></pre></div></div>
+
+<h2 id="6-dữ-liệu-kiểu-string--các-thao-tác">6. Dữ liệu kiểu String &amp; các thao tác</h2>
+<ul>
+  <li>String/chuỗi là một chuỗi các kí tự bao quanh bởi dấu nháy đơn/nháy đôi.</li>
+  <li>Chuỗi nhiều dòng sử dụng 3 nháy đơn/đôi.</li>
+  <li>Chuỗi là một mảng bao gồm các kí tự và có thể được truy xuất bằng index.</li>
+  <li>In chuỗi ra màn hình</li>
+</ul>
+
+<p>Ví dụ 6.1: Chuỗi</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; Phan Loc
+</span></code></pre></div></div>
+<h3 id="một-số-thao-tác-với-chuỗi">Một số thao tác với chuỗi</h3>
+<ul>
+  <li>Lấy độ dài chuỗi (len)</li>
+</ul>
+
+<p>Ví dụ 6.2: Đếm kí tự</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="n">do_dai_text</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">do_dai_text</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; 8
+</span></code></pre></div></div>
+
+<ul>
+  <li>Kiểm tra sự tồn tại của chuỗi (in/not in)</li>
+</ul>
+
+<p>Ví dụ 6.3: Kiểm tra kí tự</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="n">text_kiem_tra_1</span> <span class="o">=</span> <span class="s">"S"</span>
+<span class="n">text_kiem_tra_2</span> <span class="o">=</span> <span class="s">"P"</span>
+
+<span class="n">kiem_tra_1</span> <span class="o">=</span> <span class="n">text_kiem_tra_1</span> <span class="ow">in</span> <span class="n">text</span>
+<span class="n">kiem_tra_2</span> <span class="o">=</span> <span class="n">text_kiem_tra_2</span> <span class="ow">in</span> <span class="n">text</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">kiem_tra_1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">kiem_tra_2</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; False
+#&gt;&gt; True
+</span></code></pre></div></div>
+
+<ul>
+  <li>Slice syntax: lấy một chuỗi con theo start:end index</li>
+</ul>
+
+<p>Ví dụ 6.4: lấy text start:end</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="n">text_can_lay</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text_can_lay</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; Loc
+</span></code></pre></div></div>
+
+<p>Ví dụ 6.5: lấy text từ text đến hết</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="n">text_can_lay</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text_can_lay</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; an Loc
+</span></code></pre></div></div>
+
+<p>Ví dụ 6.6: lấy text từ đầu đến text</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="n">text_can_lay</span> <span class="o">=</span> <span class="n">text</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text_can_lay</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; Phan Lo
+</span></code></pre></div></div>
+
+<ul>
+  <li>Viết hoa toàn bộ chuỗi (upper), viết thường toàn bộ chuỗi (lower)</li>
+</ul>
+
+<p>Ví dụ 6.7: upper, lower chuỗi</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="n">viet_hoa</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">viet_thuong</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">viet_hoa</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">viet_thuong</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; PHAN LOC
+#&gt;&gt; phan loc
+</span></code></pre></div></div>
+
+<ul>
+  <li>Xóa dấu cách (strip)</li>
+</ul>
+
+<p>Ví dụ 6.8: Xóa dấu cách</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"    Phan Loc    "</span>
+<span class="n">text_strip</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text_strip</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; Phan Loc
+</span></code></pre></div></div>
+
+<ul>
+  <li>Thay thế chuỗi ()</li>
+</ul>
+
+<p>Ví dụ 6.9: Thay thế chuỗi</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"Phan Loc"</span>
+<span class="n">text_moi</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"Phan"</span><span class="p">,</span> <span class="s">"Fan"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text_moi</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; Fan Loc
+</span></code></pre></div></div>
+
+<ul>
+  <li>Nối chuỗi</li>
+</ul>
+
+<p>Ví dụ 6.10: Nối chuỗi</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text_1</span> <span class="o">=</span> <span class="s">"Tôi Yêu"</span>
+<span class="n">text_2</span> <span class="o">=</span> <span class="s">"Em"</span>
+
+<span class="n">text_moi</span> <span class="o">=</span> <span class="n">text_1</span> <span class="o">+</span> <span class="n">text_2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text_moi</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; Tôi Yêu Em
+</span></code></pre></div></div>
+
+<h2 id="bài-tập-thực-hành">Bài Tập Thực Hành</h2>
+<h3 id="bài-1">Bài 1</h3>
+<p>Viết chương trình nhập một số từ bàn phím và in ra số đó nhân 2.</p>
+
+<hr />
+
+<h3 id="bài-2">Bài 2</h3>
+<p>Viết chương trình nhập vào từ bàn phím <strong>Họ và tên</strong> của người dùng và in ra 2 thông tin:</p>
+<ul>
+  <li>Độ dài của tên</li>
+  <li>Tên viết hoa (in hoa toàn bộ)</li>
+</ul>
+
+<hr />
+
+<h3 id="bài-3">Bài 3</h3>
+<p>Viết chương trình nhập vào từ bàn phím một số <strong>N (N &gt; 0)</strong>.<br />
+In ra màn hình <strong>N dấu <code class="language-plaintext highlighter-rouge">*</code></strong>.</p>
+
+<hr />
+
+<h3 id="bài-4">Bài 4</h3>
+<p>Viết chương trình nhập vào từ bàn phím một <strong>chuỗi ký tự có độ dài tối thiểu 10 ký tự</strong>.<br />
+In ra <strong>chuỗi con</strong> từ <strong>vị trí số 4 đến vị trí số 7</strong>.</p>
+
+<hr />
+
+<h3 id="bài-5">Bài 5</h3>
+<p>Nhập vào <strong>2 số nguyên</strong> từ bàn phím.<br />
+In ra:</p>
+<ul>
+  <li>Tổng của 2 số</li>
+  <li>Tích của 2 số</li>
+  <li>Thương của 2 số</li>
+  <li>Hiệu của 2 số</li>
+</ul>
+
+<h3 id="bài-6">Bài 6</h3>
+<p>Nhập vào một số nguyên từ bàn phím.<br />
+In ra:</p>
+<ul>
+  <li>Giá trị của số đó</li>
+  <li>Kiểu dữ liệu của số đó</li>
+</ul>
+
+<hr />
+
+<h3 id="bài-7">Bài 7</h3>
+<p>Nhập vào một số thực từ bàn phím.<br />
+In ra:</p>
+<ul>
+  <li>Giá trị vừa nhập</li>
+  <li>Giá trị đó nhân với 3</li>
+</ul>
+
+<hr />
+
+<h3 id="bài-8">Bài 8</h3>
+<p>Nhập vào 2 số nguyên <code class="language-plaintext highlighter-rouge">a</code> và <code class="language-plaintext highlighter-rouge">b</code>.<br />
+In ra:</p>
+<ul>
+  <li>Kết quả chia lấy phần nguyên của <code class="language-plaintext highlighter-rouge">a</code> cho <code class="language-plaintext highlighter-rouge">b</code></li>
+  <li>Kết quả chia lấy dư của <code class="language-plaintext highlighter-rouge">a</code> cho <code class="language-plaintext highlighter-rouge">b</code></li>
+</ul>
+
+<hr />
+
+<h3 id="bài-9">Bài 9</h3>
+<p>Nhập vào một số nguyên.<br />
+In ra:</p>
+<ul>
+  <li>Số đó lũy thừa 2</li>
+  <li>Số đó lũy thừa 3</li>
+</ul>
+
+<hr />
+
+<h3 id="bài-10">Bài 10</h3>
+<p>Nhập vào một chuỗi bất kỳ.<br />
+In ra:</p>
+<ul>
+  <li>Độ dài của chuỗi</li>
+  <li>Chuỗi viết thường</li>
+  <li>Chuỗi viết hoa</li>
+</ul>
+
+<hr />
+
+<h3 id="bài-11">Bài 11</h3>
+<p>Nhập vào <strong>Họ</strong> và <strong>Tên</strong> (mỗi giá trị nhập trên một dòng).<br />
+Nối lại thành chuỗi <code class="language-plaintext highlighter-rouge">"Họ Tên"</code> và in ra màn hình.</p>
+
+<hr />
+
+<h3 id="bài-12">Bài 12</h3>
+<p>Nhập vào một chuỗi.<br />
+Kiểm tra xem chuỗi đó có chứa ký tự <code class="language-plaintext highlighter-rouge">"a"</code> hay không.<br />
+In ra kết quả <code class="language-plaintext highlighter-rouge">True</code> hoặc <code class="language-plaintext highlighter-rouge">False</code>.</p>
+
+<hr />
+
+<h3 id="bài-13">Bài 13</h3>
+<p>Nhập vào một chuỗi.<br />
+In ra <strong>3 ký tự đầu tiên</strong> của chuỗi đó.</p>
+
+<hr />
+
+<h3 id="bài-14">Bài 14</h3>
+<p>Nhập vào một chuỗi.<br />
+In ra <strong>3 ký tự cuối cùng</strong> của chuỗi đó.</p>
+
+<hr />
+
+<h3 id="bài-15">Bài 15</h3>
+<p>Nhập vào một chuỗi có khoảng trắng ở đầu và cuối.<br />
+In ra chuỗi sau khi đã xóa khoảng trắng.</p>
+
+<hr />
+
+<h3 id="bài-16">Bài 16</h3>
+<p>Nhập vào một chuỗi.<br />
+Thay thế tất cả ký tự <code class="language-plaintext highlighter-rouge">"a"</code> thành <code class="language-plaintext highlighter-rouge">"@"</code> và in ra chuỗi mới.</p>
+
+<hr />
+
+<h3 id="bài-17">Bài 17</h3>
+<p>Nhập vào một chuỗi.<br />
+In ra chuỗi đó <strong>2 lần liên tiếp</strong> bằng cách nối chuỗi.</p>
+
+<hr />
+
+<h3 id="bài-18">Bài 18</h3>
+<p>Nhập vào một số nguyên.<br />
+Kiểm tra xem số đó có <strong>lớn hơn 10</strong> hay không.<br />
+In ra kết quả <code class="language-plaintext highlighter-rouge">True</code> hoặc <code class="language-plaintext highlighter-rouge">False</code>.</p>
+
+<hr />
+
+<h3 id="bài-19">Bài 19</h3>
+<p>Nhập vào 2 số nguyên <code class="language-plaintext highlighter-rouge">a</code> và <code class="language-plaintext highlighter-rouge">b</code>.<br />
+In ra kết quả của biểu thức:
+(a + b) * 2</p>
+
+<hr />
+
+<h3 id="bài-20">Bài 20</h3>
+<p>Nhập vào một chuỗi bất kỳ.<br />
+In ra chuỗi con từ <strong>vị trí 2 đến vị trí 5</strong>.</p>
+
+<hr />
+
+<h3 id="bài-21">Bài 21</h3>
+<p>Nhập vào một số nguyên.<br />
+In ra:</p>
+<ul>
+  <li>Kiểu dữ liệu ban đầu</li>
+  <li>Kiểu dữ liệu sau khi ép sang <code class="language-plaintext highlighter-rouge">float</code></li>
+</ul>
+
+<hr />
+
+<h3 id="bài-22">Bài 22</h3>
+<p>Nhập vào một số thực.<br />
+Ép kiểu sang số nguyên và in ra kết quả.</p>
+
+<hr />
+
+<h3 id="bài-23">Bài 23</h3>
+<p>Nhập vào một chuỗi.<br />
+Kiểm tra xem chuỗi đó có chứa từ <code class="language-plaintext highlighter-rouge">"Python"</code> hay không.<br />
+In ra kết quả <code class="language-plaintext highlighter-rouge">True</code> hoặc <code class="language-plaintext highlighter-rouge">False</code>.</p>
+
+<hr />
+
+<h3 id="bài-24">Bài 24</h3>
+<p>Nhập vào tên của bạn.<br />
+In ra câu:
+Xin chào <tên của="" bạn=""></tên></p>
+
+<hr />
+
+<h3 id="bài-25">Bài 25</h3>
+<p>Nhập vào một chuỗi có ít nhất 5 ký tự.<br />
+In ra:</p>
+<ul>
+  <li>Ký tự đầu tiên</li>
+  <li>Ký tự cuối cùng</li>
+</ul>
 
         </div>
         </article>

@@ -145,3 +145,48 @@
   gap: 1rem;
   margin-top: 2rem;
 }
+
+/* ===== Code block fix ===== */
+
+.teaching-detail pre {
+  background: #1e1e1e;
+  padding: 1.2rem 1.4rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.teaching-detail pre code {
+  color: #eaeaea;
+  font-family: "Fira Code", monospace;
+  font-size: 2rem;
+  line-height: 1.7;
+}
+
+/* tránh bị ăn màu link */
+.teaching-detail code {
+  color: inherit;
+}
+
+.teaching-detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+}
+
+.teaching-detail th,
+.teaching-detail td {
+  border: 1px solid #333;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.teaching-detail th {
+  background: #1f2937;
+  color: #fff;
+}
+
+.teaching-detail td {
+  background: #111;
+}
