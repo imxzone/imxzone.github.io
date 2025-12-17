@@ -4,7 +4,7 @@ title: "Rise Space Season 2"
 slug: rise_space_season_2
 ---
 
-# Slot 2
+# Module 1 
 ## Agenda
 - Một số lưu ý khi viết code
 - Nhập/Xuất dữ liệu với Python
@@ -452,7 +452,7 @@ In ra:
 - Ký tự cuối cùng  
 
 
-# Module 3 Điều kiện rẽ nhánh & Vòng lặp
+# Module 2 Điều kiện rẽ nhánh & Vòng lặp
 
 ## Agenda
 - Mệnh đề if, if else, if elif else
