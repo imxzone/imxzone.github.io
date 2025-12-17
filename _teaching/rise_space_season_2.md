@@ -450,3 +450,279 @@ Nhập vào một chuỗi có ít nhất 5 ký tự.
 In ra:
 - Ký tự đầu tiên  
 - Ký tự cuối cùng  
+
+
+# Module 3 Điều kiện rẽ nhánh & Vòng lặp
+
+## Agenda
+- Mệnh đề if, if else, if elif else
+- Mệnh đề if lồng nhau
+- Vòng lặp While, While else, Break, Continue
+- Vòng lặp For, Range, Break, Continue
+- Hands on
+- Assignment
+
+## 1. Mệnh đề if
+- Cấu trúc tổng quan của một mệnh đề if
+```Python
+if <Điều kiện>
+    <đoạn lệnh thực thi>
+```
+
+- <Điều kiện> là gì ?
+    - Là các điều kiện có giá trị Đúng (True)/Sai (False)
+    - Điều kiện đơn:
+        - Là điều kiện chỉ có một phép so sánh  
+        - Ví dụ:
+            - `a == b`, `a != b`, `a < b`, `a <= b`, `a > b`, `a >= b`
+            - `s1 in S`
+            - `NOT (s1 in S)`
+
+    - Điều kiện phức tạp
+        - Là điều kiện có nhiều phép so sánh kết nối với nhau bởi **AND**, **OR**
+        - Ví dụ:
+            - `(a == b) and (a > 0)`
+
+```python
+score = 6
+if score >= 5:
+    print(pass exam)
+
+#>> pass exam
+```
+
+- Bài tập thực hành:
+Viết chương trình nhập vào Họ và tên nhân viên, xếp loại của nhân viên (xếp loại là A1, A2 hoặc A3) và lương của nhân viên từ bàn phím. Giả sử quy định của công ty là A2 và A3 thưởng như nhau là 3 tháng lương, riêng A1 thì được cộng thêm 1 tháng.
+
+Hãy in ra màn hình họ tên và mức thưởng nhân viên đó được hưởng.
+
+Ví dụ:
+Nhập vào Nguyễn Văn A, loại A1 và lương tháng là 10,000,000 đồng thì sẽ in ra
+
+“Nhân viên Nguyễn Văn A xếp loại A1 nên được thưởng lương là 40,000,000 đồng”
+
+
+Giải mẫu:
+```python
+name = input("Nhập họ và tên nhân viên: ")
+rank = input("Nhập xếp loại (A1, A2, A3): ")
+salary = float(input("Nhập lương tháng: "))
+
+if rank == "A1":
+    bonus_months = 4
+elif rank == "A2" or rank == "A3":
+    bonus_months = 3
+else:
+    bonus_months = 0
+    print("Xếp loại không hợp lệ!")
+
+bonus_money = bonus_months * salary
+
+print(
+    "Nhân viên ", name,"xếp loại ", rank, "nên được thưởng lương là ", bonus_money, "đồng"
+)
+```
+
+### Mệnh đề if lồng nhau
+- Cấu trúc:
+```Python
+If <điều kiện 1>:
+    if <điều kiện 2>:
+        <đoạn lệnh thực thi A>
+    else:
+        <đoạn lệnh thực thi B>
+else:
+    if <điều kiện 3>:
+        <đoạn lệnh thực thi C>
+    elif <điều kiện 4>:
+        <đoạn lệnh thực thi D>
+    else:
+        <đoạn lệnh thực thi E>
+```
+
+- Bài tập thực hành:
+Viết chương trình nhập vào Chức vụ của nhân viên (CV1, CV2, hoặc CV3) và mức đánh giá A1, A2 hoặc A3. Giả sử quy tắc thưởng như sau:
+- Nếu là CV3 thì:
+    - Nếu A1 thưởng 2 tháng
+    - Còn lại thưởng 1 tháng
+- Còn các loại CV khác thì:
+    - Nếu A1 thưởng 3 tháng
+    - Nếu A2 thưởng 2.5 tháng
+    - Còn lại thưởng 2 tháng
+
+Hãy in ra màn hình số tháng sẽ được thưởng của nhân viên vừa nhập.
+
+Ví dụ:
+
+Nhập vào CV3, loại A1 thì sẽ in ra "2 tháng".
+
+## 3. Vòng lặp While
+- Thực thi một đoạn lệnh khi điều kiện đưa ra còn đúng.
+
+```Python
+Khi mà <còn tiền>:
+    <đưa cho người yêu>
+
+While <Điều kiện>:
+    <đoạn lệnh thực thi>
+```
+
+Ví dụ:
+
+```Python
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+
+```
+
+- Mệnh đề Break: phá vỡ vòng lặp
+
+```Python
+i = 1
+while i < 6:
+    print(i)
+    if i ==3:
+        break
+    i += 1
+
+```
+
+- Mệnh đề Continue: bỏ vòng lặp hiện tại, quay về đầu lệnh.
+
+```Python
+i = 0
+while i < 6:
+    i += 1
+    if i ==3:
+        continue
+    print(i)
+
+```
+
+- Mệnh đề else: chạy khi điều kiện của While không còn đúng nữa và chỉ chạy 1 lần.
+
+```Python
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+else:
+    print("i is no longer less than 6")
+    
+```
+
+- Bài tập thực hành:
+Viết chương trình nhập vào Họ và tên nhân viên, xếp loại của nhân viên (xếp loại là A1, A2 hoặc A3).
+Nếu người dùng nhập không đúng 1 trong 3 giá trị (A1, A2 hoặc A3) thì yêu cầu nhập lại cho đến khi nhập đúng.
+Nếu người dùng nhập đúng thì in ra màn hình Họ và tên của nhân viên và xếp loại của nhân viên đó.
+
+## 4. Vòng lặp For
+- Lặp qua phần tử của một dãy giá trị.
+- Có thể lặp qua các kí tự của chuỗi hoặc các phần tử của danh sách, tuple, dictionary, set...
+- Cú pháp:
+
+```Python
+For <tên biến> in <dãy giá trị>:
+    <đoạn lệnh thực thi>
+```
+
+- Hàm Range(s, e): tạo ra một dãy các số bắt đầu từ s và kết thúc tại e − 1.
+- Sử dụng tương đương với for i := 1 to n do trong các ngôn ngữ khác.
+- Ví dụ: chạy từ 1 đến 5 và in ra màn hình:
+
+```python
+for x in range(1, 6):
+    print(x)
+```
+
+- Lặp qua các kí tự trong chuỗi.
+- Lặp qua các phần tử trong một list.
+- Mệnh đề break, continue, else.
+- Vòng lặp for lồng nhau.
+
+```Python
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+    for y in fruits:
+        print(x, y)
+```
+
+- Bài tập Thực hành:
+
+Viết chương trình nhập vào một số từ 1 đến 9. Nếu người dùng nhập ngoài khoảng 1 đến 9 thì yêu cầu nhập lại. Nếu người dùng đã nhập đúng thì in ra bảng cửu chương của số tương ứng.
+
+Ví dụ: người dùng nhập 5 thì in ra:
+
+```Python
+5 x 1 = 5
+5 x 2 = 10
+...
+...
+5 x 9 = 45
+5 x 10 = 50
+```
+
+## Bài Tập
+
+### Bài 1
+Viết chương trình nhập vào một số **N** từ bàn phím và in ra đó là **số chẵn hay số lẻ**.
+
+---
+
+### Bài 2
+Viết chương trình nhập vào **2 số X, Y**, in ra kết quả so sánh **X** và **Y**.  
+Ví dụ:
+- “X lớn hơn Y”
+- “X nhỏ hơn Y”
+- “X bằng Y”
+
+---
+
+### Bài 3
+Viết chương trình nhập vào **tên môn**, **điểm số** và **họ tên của học sinh**.
+
+- Tên môn phải là **toán**, **văn** hoặc **anh**  
+- Nếu nhập sai, yêu cầu người dùng nhập lại  
+
+Chương trình cần tính điểm và in ra **họ tên** và **điểm cuối cùng** của học sinh, biết rằng:
+
+- Môn Toán: Hệ số **3**
+- Môn Văn: Hệ số **2**
+- Môn Anh: Hệ số **1**
+
+**Ví dụ:**
+- Nhập vào môn Toán, 8 điểm → điểm cuối cùng là **8 × 3 = 24 điểm**
+- Nhập vào môn Văn, 7 điểm → điểm cuối cùng là **14 điểm**
+
+### Bài 4
+Viết chương trình giả lập trò chơi **Oẳn Tù Tì**.
+
+**Phần 1:**  
+Cho người dùng nhập vào **1 trong 3 giá trị**: **“Đấm”**, **“Lá”**, **“Kéo”**.  
+Máy tính cũng sẽ **chọn ngẫu nhiên** 1 trong 3 giá trị **“Đấm”**, **“Lá”**, **“Kéo”** cho mình.  
+Chương trình cần **in ra ai là người chiến thắng**.
+
+Biết rằng đoạn mã máy tính chọn ngẫu nhiên được cho sẵn là:
+
+```python
+import random
+may_chon = random.choice(["Đấm", "Lá", "Kéo"])
+```
+
+## Assignment
+
+Viết chương trình giả lập trò chơi **Oẳn Tù Tì (Phần 2)**.
+
+### Phần 1
+Đã làm trong **Hands-on**. Nếu chưa làm thì hoàn thành **Phần 1** trước.
+
+### Phần 2
+Sửa chương trình và thêm nội dung sau:  
+Sau mỗi lần chơi sẽ hỏi người chơi **có chơi tiếp không?**  
+- Nếu người dùng nhập vào **“Có”** thì chơi tiếp game mới  
+- Ngược lại, game sẽ **thoát**
+

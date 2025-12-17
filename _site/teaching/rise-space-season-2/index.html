@@ -601,6 +601,324 @@ In ra:</p>
   <li>Ký tự cuối cùng</li>
 </ul>
 
+<h1 id="module-3-điều-kiện-rẽ-nhánh--vòng-lặp">Module 3 Điều kiện rẽ nhánh &amp; Vòng lặp</h1>
+
+<h2 id="agenda-1">Agenda</h2>
+<ul>
+  <li>Mệnh đề if, if else, if elif else</li>
+  <li>Mệnh đề if lồng nhau</li>
+  <li>Vòng lặp While, While else, Break, Continue</li>
+  <li>Vòng lặp For, Range, Break, Continue</li>
+  <li>Hands on</li>
+  <li>Assignment</li>
+</ul>
+
+<h2 id="1-mệnh-đề-if">1. Mệnh đề if</h2>
+<ul>
+  <li>Cấu trúc tổng quan của một mệnh đề if
+    <pre><code class="language-Python">if &lt;Điều kiện&gt;
+  &lt;đoạn lệnh thực thi&gt;
+</code></pre>
+  </li>
+  <li>
+    <Điều kiện=""> là gì ?
+</Điều>
+    <ul>
+      <li>Là các điều kiện có giá trị Đúng (True)/Sai (False)</li>
+      <li>Điều kiện đơn:
+        <ul>
+          <li>Là điều kiện chỉ có một phép so sánh</li>
+          <li>Ví dụ:
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">a == b</code>, <code class="language-plaintext highlighter-rouge">a != b</code>, <code class="language-plaintext highlighter-rouge">a &lt; b</code>, <code class="language-plaintext highlighter-rouge">a &lt;= b</code>, <code class="language-plaintext highlighter-rouge">a &gt; b</code>, <code class="language-plaintext highlighter-rouge">a &gt;= b</code></li>
+              <li><code class="language-plaintext highlighter-rouge">s1 in S</code></li>
+              <li><code class="language-plaintext highlighter-rouge">NOT (s1 in S)</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Điều kiện phức tạp
+        <ul>
+          <li>Là điều kiện có nhiều phép so sánh kết nối với nhau bởi <strong>AND</strong>, <strong>OR</strong></li>
+          <li>Ví dụ:
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">(a == b) and (a &gt; 0)</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">score</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="k">pass</span> <span class="n">exam</span><span class="p">)</span>
+
+<span class="c1">#&gt;&gt; pass exam
+</span></code></pre></div></div>
+
+<ul>
+  <li>Bài tập thực hành:
+Viết chương trình nhập vào Họ và tên nhân viên, xếp loại của nhân viên (xếp loại là A1, A2 hoặc A3) và lương của nhân viên từ bàn phím. Giả sử quy định của công ty là A2 và A3 thưởng như nhau là 3 tháng lương, riêng A1 thì được cộng thêm 1 tháng.</li>
+</ul>
+
+<p>Hãy in ra màn hình họ tên và mức thưởng nhân viên đó được hưởng.</p>
+
+<p>Ví dụ:
+Nhập vào Nguyễn Văn A, loại A1 và lương tháng là 10,000,000 đồng thì sẽ in ra</p>
+
+<p>“Nhân viên Nguyễn Văn A xếp loại A1 nên được thưởng lương là 40,000,000 đồng”</p>
+
+<p>Giải mẫu:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Nhập họ và tên nhân viên: "</span><span class="p">)</span>
+<span class="n">rank</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Nhập xếp loại (A1, A2, A3): "</span><span class="p">)</span>
+<span class="n">salary</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Nhập lương tháng: "</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="s">"A1"</span><span class="p">:</span>
+    <span class="n">bonus_months</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">elif</span> <span class="n">rank</span> <span class="o">==</span> <span class="s">"A2"</span> <span class="ow">or</span> <span class="n">rank</span> <span class="o">==</span> <span class="s">"A3"</span><span class="p">:</span>
+    <span class="n">bonus_months</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">bonus_months</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Xếp loại không hợp lệ!"</span><span class="p">)</span>
+
+<span class="n">bonus_money</span> <span class="o">=</span> <span class="n">bonus_months</span> <span class="o">*</span> <span class="n">salary</span>
+
+<span class="k">print</span><span class="p">(</span>
+    <span class="s">"Nhân viên "</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span><span class="s">"xếp loại "</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="s">"nên được thưởng lương là "</span><span class="p">,</span> <span class="n">bonus_money</span><span class="p">,</span> <span class="s">"đồng"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="mệnh-đề-if-lồng-nhau">Mệnh đề if lồng nhau</h3>
+<ul>
+  <li>Cấu trúc:
+    <pre><code class="language-Python">If &lt;điều kiện 1&gt;:
+  if &lt;điều kiện 2&gt;:
+      &lt;đoạn lệnh thực thi A&gt;
+  else:
+      &lt;đoạn lệnh thực thi B&gt;
+else:
+  if &lt;điều kiện 3&gt;:
+      &lt;đoạn lệnh thực thi C&gt;
+  elif &lt;điều kiện 4&gt;:
+      &lt;đoạn lệnh thực thi D&gt;
+  else:
+      &lt;đoạn lệnh thực thi E&gt;
+</code></pre>
+  </li>
+  <li>Bài tập thực hành:
+Viết chương trình nhập vào Chức vụ của nhân viên (CV1, CV2, hoặc CV3) và mức đánh giá A1, A2 hoặc A3. Giả sử quy tắc thưởng như sau:</li>
+  <li>Nếu là CV3 thì:
+    <ul>
+      <li>Nếu A1 thưởng 2 tháng</li>
+      <li>Còn lại thưởng 1 tháng</li>
+    </ul>
+  </li>
+  <li>Còn các loại CV khác thì:
+    <ul>
+      <li>Nếu A1 thưởng 3 tháng</li>
+      <li>Nếu A2 thưởng 2.5 tháng</li>
+      <li>Còn lại thưởng 2 tháng</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Hãy in ra màn hình số tháng sẽ được thưởng của nhân viên vừa nhập.</p>
+
+<p>Ví dụ:</p>
+
+<p>Nhập vào CV3, loại A1 thì sẽ in ra “2 tháng”.</p>
+
+<h2 id="3-vòng-lặp-while">3. Vòng lặp While</h2>
+<ul>
+  <li>Thực thi một đoạn lệnh khi điều kiện đưa ra còn đúng.</li>
+</ul>
+
+<pre><code class="language-Python">Khi mà &lt;còn tiền&gt;:
+    &lt;đưa cho người yêu&gt;
+
+While &lt;Điều kiện&gt;:
+    &lt;đoạn lệnh thực thi&gt;
+</code></pre>
+
+<p>Ví dụ:</p>
+
+<pre><code class="language-Python">i = 1
+while i &lt; 6:
+    print(i)
+    i += 1
+
+</code></pre>
+
+<ul>
+  <li>Mệnh đề Break: phá vỡ vòng lặp</li>
+</ul>
+
+<pre><code class="language-Python">i = 1
+while i &lt; 6:
+    print(i)
+    if i ==3:
+        break
+    i += 1
+
+</code></pre>
+
+<ul>
+  <li>Mệnh đề Continue: bỏ vòng lặp hiện tại, quay về đầu lệnh.</li>
+</ul>
+
+<pre><code class="language-Python">i = 0
+while i &lt; 6:
+    i += 1
+    if i ==3:
+        continue
+    print(i)
+
+</code></pre>
+
+<ul>
+  <li>Mệnh đề else: chạy khi điều kiện của While không còn đúng nữa và chỉ chạy 1 lần.</li>
+</ul>
+
+<pre><code class="language-Python">i = 1
+while i &lt; 6:
+    print(i)
+    i += 1
+else:
+    print("i is no longer less than 6")
+    
+</code></pre>
+
+<ul>
+  <li>Bài tập thực hành:
+Viết chương trình nhập vào Họ và tên nhân viên, xếp loại của nhân viên (xếp loại là A1, A2 hoặc A3).
+Nếu người dùng nhập không đúng 1 trong 3 giá trị (A1, A2 hoặc A3) thì yêu cầu nhập lại cho đến khi nhập đúng.
+Nếu người dùng nhập đúng thì in ra màn hình Họ và tên của nhân viên và xếp loại của nhân viên đó.</li>
+</ul>
+
+<h2 id="4-vòng-lặp-for">4. Vòng lặp For</h2>
+<ul>
+  <li>Lặp qua phần tử của một dãy giá trị.</li>
+  <li>Có thể lặp qua các kí tự của chuỗi hoặc các phần tử của danh sách, tuple, dictionary, set…</li>
+  <li>Cú pháp:</li>
+</ul>
+
+<pre><code class="language-Python">For &lt;tên biến&gt; in &lt;dãy giá trị&gt;:
+    &lt;đoạn lệnh thực thi&gt;
+</code></pre>
+
+<ul>
+  <li>Hàm Range(s, e): tạo ra một dãy các số bắt đầu từ s và kết thúc tại e − 1.</li>
+  <li>Sử dụng tương đương với for i := 1 to n do trong các ngôn ngữ khác.</li>
+  <li>Ví dụ: chạy từ 1 đến 5 và in ra màn hình:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Lặp qua các kí tự trong chuỗi.</li>
+  <li>Lặp qua các phần tử trong một list.</li>
+  <li>Mệnh đề break, continue, else.</li>
+  <li>Vòng lặp for lồng nhau.</li>
+</ul>
+
+<pre><code class="language-Python">adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+    for y in fruits:
+        print(x, y)
+</code></pre>
+
+<ul>
+  <li>Bài tập Thực hành:</li>
+</ul>
+
+<p>Viết chương trình nhập vào một số từ 1 đến 9. Nếu người dùng nhập ngoài khoảng 1 đến 9 thì yêu cầu nhập lại. Nếu người dùng đã nhập đúng thì in ra bảng cửu chương của số tương ứng.</p>
+
+<p>Ví dụ: người dùng nhập 5 thì in ra:</p>
+
+<pre><code class="language-Python">5 x 1 = 5
+5 x 2 = 10
+...
+...
+5 x 9 = 45
+5 x 10 = 50
+</code></pre>
+
+<h2 id="bài-tập">Bài Tập</h2>
+
+<h3 id="bài-1-1">Bài 1</h3>
+<p>Viết chương trình nhập vào một số <strong>N</strong> từ bàn phím và in ra đó là <strong>số chẵn hay số lẻ</strong>.</p>
+
+<hr />
+
+<h3 id="bài-2-1">Bài 2</h3>
+<p>Viết chương trình nhập vào <strong>2 số X, Y</strong>, in ra kết quả so sánh <strong>X</strong> và <strong>Y</strong>.<br />
+Ví dụ:</p>
+<ul>
+  <li>“X lớn hơn Y”</li>
+  <li>“X nhỏ hơn Y”</li>
+  <li>“X bằng Y”</li>
+</ul>
+
+<hr />
+
+<h3 id="bài-3-1">Bài 3</h3>
+<p>Viết chương trình nhập vào <strong>tên môn</strong>, <strong>điểm số</strong> và <strong>họ tên của học sinh</strong>.</p>
+
+<ul>
+  <li>Tên môn phải là <strong>toán</strong>, <strong>văn</strong> hoặc <strong>anh</strong></li>
+  <li>Nếu nhập sai, yêu cầu người dùng nhập lại</li>
+</ul>
+
+<p>Chương trình cần tính điểm và in ra <strong>họ tên</strong> và <strong>điểm cuối cùng</strong> của học sinh, biết rằng:</p>
+
+<ul>
+  <li>Môn Toán: Hệ số <strong>3</strong></li>
+  <li>Môn Văn: Hệ số <strong>2</strong></li>
+  <li>Môn Anh: Hệ số <strong>1</strong></li>
+</ul>
+
+<p><strong>Ví dụ:</strong></p>
+<ul>
+  <li>Nhập vào môn Toán, 8 điểm → điểm cuối cùng là <strong>8 × 3 = 24 điểm</strong></li>
+  <li>Nhập vào môn Văn, 7 điểm → điểm cuối cùng là <strong>14 điểm</strong></li>
+</ul>
+
+<h3 id="bài-4-1">Bài 4</h3>
+<p>Viết chương trình giả lập trò chơi <strong>Oẳn Tù Tì</strong>.</p>
+
+<p><strong>Phần 1:</strong><br />
+Cho người dùng nhập vào <strong>1 trong 3 giá trị</strong>: <strong>“Đấm”</strong>, <strong>“Lá”</strong>, <strong>“Kéo”</strong>.<br />
+Máy tính cũng sẽ <strong>chọn ngẫu nhiên</strong> 1 trong 3 giá trị <strong>“Đấm”</strong>, <strong>“Lá”</strong>, <strong>“Kéo”</strong> cho mình.<br />
+Chương trình cần <strong>in ra ai là người chiến thắng</strong>.</p>
+
+<p>Biết rằng đoạn mã máy tính chọn ngẫu nhiên được cho sẵn là:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">may_chon</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">([</span><span class="s">"Đấm"</span><span class="p">,</span> <span class="s">"Lá"</span><span class="p">,</span> <span class="s">"Kéo"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h2 id="assignment">Assignment</h2>
+
+<p>Viết chương trình giả lập trò chơi <strong>Oẳn Tù Tì (Phần 2)</strong>.</p>
+
+<h3 id="phần-1">Phần 1</h3>
+<p>Đã làm trong <strong>Hands-on</strong>. Nếu chưa làm thì hoàn thành <strong>Phần 1</strong> trước.</p>
+
+<h3 id="phần-2">Phần 2</h3>
+<p>Sửa chương trình và thêm nội dung sau:<br />
+Sau mỗi lần chơi sẽ hỏi người chơi <strong>có chơi tiếp không?</strong></p>
+<ul>
+  <li>Nếu người dùng nhập vào <strong>“Có”</strong> thì chơi tiếp game mới</li>
+  <li>Ngược lại, game sẽ <strong>thoát</strong></li>
+</ul>
+
+
         </div>
         </article>
     </main>
