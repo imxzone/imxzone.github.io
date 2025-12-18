@@ -726,3 +726,218 @@ Sau mỗi lần chơi sẽ hỏi người chơi **có chơi tiếp không?**
 - Nếu người dùng nhập vào **“Có”** thì chơi tiếp game mới  
 - Ngược lại, game sẽ **thoát**
 
+# Bài Tập Tổng Hợp
+
+### Bài 1
+
+Nhập điểm **Toán**, **Văn**, **Anh**.
+
+Nếu điểm hợp lệ (trong khoảng từ **0 đến 10**), thực hiện tính **điểm trung bình** và đưa ra nhận xét theo các điều kiện sau:
+
+- Nếu điểm trung bình **≥ 8**, **Toán hoặc Văn ≥ 8** và **không có môn nào dưới 6.5**  
+  → In ra: **Học sinh giỏi**
+
+- Nếu không đủ điều kiện học sinh giỏi, xét tiếp:
+  - Điểm trung bình **≥ 6.5**
+  - **Toán hoặc Văn ≥ 6.5**
+  - **Không có môn nào dưới 5**  
+  → In ra: **Học sinh khá**
+
+- Nếu không đủ điều kiện học sinh khá, xét tiếp:
+  - Điểm trung bình **≥ 5**
+  - **Toán hoặc Văn ≥ 5**
+  - **Không có môn nào dưới 3.5**  
+  → In ra: **Học sinh trung bình**
+
+- Nếu không đủ điều kiện học sinh trung bình, xét tiếp:
+  - Điểm trung bình **≥ 3.5**
+  - **Toán hoặc Văn ≥ 3.5**
+  - **Không có môn nào dưới 2**  
+  → In ra: **Học sinh yếu**
+
+- Nếu không thỏa mãn tất cả các điều kiện trên  
+  → In ra: **Học sinh kém**
+
+---
+
+### Bài 2
+
+Nhập **tháng** và **năm**.
+
+Yêu cầu:  
+- Xác định **tháng đó có bao nhiêu ngày**.  
+- Lưu ý kiểm tra **năm nhuận** đối với tháng 2.
+
+### Bài 3
+
+Giải và biện luận phương trình:
+
+ax² + bx + c = 0
+
+---
+
+### Bài 4
+
+Nhập vào **3 số thực dương a, b, c**.  
+Kiểm tra xem **a, b, c có cấu thành độ dài của một tam giác** được không.
+
+---
+
+### Bài 5
+
+In các **số lẻ dương bé hơn 100**.
+
+---
+
+### Bài 6
+
+In các **số chẵn chia hết cho 3 bé hơn 100**.
+
+---
+
+### Bài 7
+
+Nhập vào **n**.
+
+Tính tổng:
+
+S = 1 + 2 + 3 + 4 + … + n
+
+### Bài 8
+
+Nhập vào **số nguyên dương a**, đếm **số ước của a**.
+
+---
+
+### Bài 9
+
+Nhập vào **số nguyên dương a và b**, in ra **toàn bộ ước chung của a và b**.
+
+---
+
+### Bài 10
+
+Nhập vào **số nguyên dương a**, kiểm tra xem **a có phải là số nguyên tố hay không**.
+
+---
+
+### Bài 11
+
+Nhập vào **một dãy số nguyên**, ngừng nhập khi người dùng nhập **-1**.
+
+Sau khi nhập xong:
+- In ra **số lớn nhất**
+- In ra **số nhỏ nhất** trong những số vừa nhập
+
+### Bài 12
+
+Nhập vào **số nguyên dương n**, đếm xem **n có bao nhiêu chữ số**.
+
+---
+
+### Bài 13
+
+Nhập vào **số nguyên dương n**, đếm xem **n có bao nhiêu chữ số chẵn**, **bao nhiêu chữ số lẻ**.
+
+---
+
+### Bài 14
+
+Nhập vào **số nguyên dương n**, tính **tổng các chữ số của n**.
+
+---
+
+### Bài 15
+
+Nhập vào **một chuỗi**, hãy **in từ đầu tiên trong chuỗi**.
+
+### Bài 16
+
+Nhập vào **một chuỗi có dạng 3 số nguyên**, mỗi số nguyên cách nhau một **dấu phẩy**, hãy **tính tổng 3 số nguyên đó**.
+
+**Ví dụ:**
+- Nhập: `3, 12, 15`
+- Tổng: `30`
+
+---
+
+### Bài 17
+
+Nhập vào **một chuỗi**, hãy đếm xem trong chuỗi có:
+- Bao nhiêu **ký tự in hoa**
+- Bao nhiêu **ký tự in thường**
+- Bao nhiêu **ký tự số**
+
+---
+
+### Bài 18
+
+Nhập vào **một chuỗi**, hãy **tách toàn bộ ký tự số trong chuỗi ra** rồi **tính tổng của chúng**.
+
+**Ví dụ:**
+- Nhập chuỗi: `abd45ecf47wde3s1`
+- Tổng: `4 + 5 + 4 + 7 + 3 + 1 = 24`
+
+### Bài 19
+
+Nhập vào **một chuỗi**, kiểm tra chuỗi đó có phải là **mật khẩu mạnh** hay không.
+
+Một **chuỗi mật khẩu mạnh** cần có:
+- Ít nhất **1 ký tự đặc biệt**
+- Ít nhất **1 ký tự in hoa**
+- Ít nhất **1 chữ số**
+- Ít nhất **1 chữ thường**
+- **Độ dài lớn hơn 6**
+
+---
+
+### Bài 20
+
+Nhập vào **nhiệt độ °C**, in ra **nhiệt độ °F**.
+
+---
+
+### Bài 21
+
+Nhập vào **số nguyên a**, kiểm tra xem **a có phải là số chính phương hay không**.
+
+- Nếu có, in ra `True`
+- Ngược lại, in ra `False`
+
+---
+
+### Bài 22
+
+Dãy số **Fibonacci** là dãy số được định nghĩa như sau:
+
+`1, 1, 2, 3, 5, 8, 13, ...`  
+(số kế tiếp bằng **tổng hai số trước đó**)
+
+Nhập vào **a**, hãy tìm **số trong dãy Fibonacci lớn nhất nhưng không vượt quá a**.
+
+---
+
+### Bài 23
+
+Nhập vào **số nguyên dương n**, kiểm tra xem **n có phải là số dạng 2^k hay không**.
+
+### Bài 24
+
+Nhập **n**.
+
+Cho:
+S(k) = 1 + 2 + 3 + … + k
+
+Tìm **k** sao cho **S(k) lớn nhất nhưng nhỏ hơn n**.
+
+---
+
+### Bài 25
+
+Nhập vào **một chuỗi**, hãy đếm xem trong chuỗi có **bao nhiêu từ**.
+
+**Quy định:**
+- Chuỗi **không có ký tự đặc biệt**
+- **Không có số**
+- **Không có dấu câu**
+- Chỉ có **ký tự chữ** và **khoảng trắng**
