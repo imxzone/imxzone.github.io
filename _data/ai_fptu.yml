@@ -1,6 +1,7 @@
 - title: 
     en: "PFP191 - Programming Fundamentals with Python"
     vi: "PFP191 - Cơ sở lập trình (với Python)"
+  slug: teaching/ai_fptu/pfp191
   priority: 10
   semester: 1
   description: 
@@ -17,8 +18,9 @@
   star: true
 
 - title: 
-    en: "PFP191 - Programming Fundamentals with Python"
-    vi: "PFP191 - Cơ sở lập trình (với Python)"
+    en: "MAE - Programming Fundamentals with Python"
+    vi: "MAE - Cơ sở lập trình (với Python)"
+  slug: mae101
   priority: 10
   semester: 1
   description: 
@@ -35,8 +37,9 @@
   star: true
 
 - title: 
-    en: "PFP191 - Programming Fundamentals with Python"
-    vi: "PFP191 - Cơ sở lập trình (với Python)"
+    en: "CSD203 - Programming Fundamentals with Python"
+    vi: "CSD203 - Cơ sở lập trình (với Python)"
+  slug: csd203
   priority: 10
   semester: 2
   description: 

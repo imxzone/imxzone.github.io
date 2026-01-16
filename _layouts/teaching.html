@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
+
 <body class="{{ page.layout }}-page">
     {% assign item = site.data.teaching | where: "slug", page.slug | first %}
     <main class="teaching-page">
         <article class="teaching-detail">
         <h1>{{ page.title }}</h1>
-
+        <p class="page-meta">Updated: {{ page.last_modified_at | date: "%d %b %Y" }}</p>
         <div class="content">
             {{ content }}
         </div>

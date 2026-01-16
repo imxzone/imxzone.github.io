@@ -34,6 +34,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
+  - jekyll-last-modified-at
 timezone: Asia/Ho_Chi_Minh
 
 collections:

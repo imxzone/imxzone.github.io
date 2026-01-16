@@ -190,3 +190,7 @@
 .teaching-detail td {
   background: #111;
 }
+
+.project-image-link { display: block; }
+.project-image-link:hover .project-image { transform: scale(1.02); }
+.project-image { transition: transform .2s ease; }

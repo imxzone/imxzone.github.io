@@ -6,7 +6,6 @@ permalink: /teaching/
 
 <section class="services" id="services">
     <h2 class="heading">My <span>Teaching</span></h2>
-
     <div class="services-container">
         {%- assign teaching_items = site.data.teaching
             | sort: "priority"
@@ -69,31 +68,50 @@ permalink: /teaching/
 
   {% assign lang = page.lang | default: "en" %}
 
-  {%- assign ai_items = site.data.ai_fptu -%}
-  {%- assign ai_items = ai_items | sort: "priority" | reverse -%}
-  {%- assign ai_items = ai_items | sort: "date" | reverse -%}
+  {% assign ai_items = site.data.ai_fptu %}
+  {% assign ai_items = ai_items | sort: "date" | reverse %}
 
-  {%- for sem in (1..5) -%}
-    {%- assign sem_str = sem | append: "" -%}
+  {% for sem in (1..5) %}
+    {% assign sem_str = sem | append: "" %}
+    {% assign sem_items = "" | split: "" %}
 
-    {%- assign sem_items = "" | split: "" -%}
-    {%- for it in ai_items -%}
-      {%- assign it_sem = it.semester | append: "" -%}
-      {%- if it_sem == sem_str -%}
-        {%- assign sem_items = sem_items | push: it -%}
-      {%- endif -%}
-    {%- endfor -%}
+    {% for it in ai_items %}
+      {% assign it_sem = it.semester | append: "" %}
+      {% if it_sem == sem_str %}
+        {% assign sem_items = sem_items | push: it %}
+      {% endif %}
+    {% endfor %}
 
-    {%- if sem_items.size > 0 -%}
+    {% if sem_items.size > 0 %}
       <h3 class="semester-title">Semester {{ sem }}</h3>
 
       <div class="services-container semester-grid-5">
-        {%- for item in sem_items -%}
-          <div class="services-box">
+        {% for item in sem_items %}
+          {% assign url = "" %}
+          {% if item.links and item.links.url %}
+            {% assign url = item.links.url %}
+          {% elsif item.slug %}
+            {% assign url = "/" | append: item.slug | append: "/" %}
+          {% endif %}
 
+          {% assign is_external = false %}
+          {% if url contains "http://" or url contains "https://" %}
+            {% assign is_external = true %}
+          {% endif %}
+
+          <div class="services-box">
             {% if item.media and item.media.cover %}
               <div class="project-image-wrapper">
-                <img src="{{ item.media.cover | relative_url }}" alt="{{ item.title }}" class="project-image">
+                {% if url != "" %}
+                  <a
+                    href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}"
+                    {% if is_external %}target="_blank" rel="noopener"{% endif %}
+                    class="project-image-link">
+                    <img src="{{ item.media.cover | relative_url }}" alt="{{ item.title[lang] }}" class="project-image">
+                  </a>
+                {% else %}
+                  <img src="{{ item.media.cover | relative_url }}" alt="{{ item.title[lang] }}" class="project-image">
+                {% endif %}
               </div>
             {% endif %}
 
@@ -108,27 +126,10 @@ permalink: /teaching/
               {% if item.level %}
                 <p class="project-tech">{{ item.level }}</p>
               {% endif %}
-
-              {% if item.links and item.links.url %}
-                {% assign url = item.links.url %}
-                {% assign is_external = false %}
-                {% if url contains "http://" or url contains "https://" %}
-                  {% assign is_external = true %}
-                {% endif %}
-
-                <a
-                  href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}"
-                  class="btn"
-                  {% if is_external %}target="_blank" rel="noopener"{% endif %}>
-                  View Details
-                </a>
-              {% endif %}
             </div>
-
           </div>
-        {%- endfor -%}
+        {% endfor %}
       </div>
-    {%- endif -%}
-  {%- endfor -%}
-
+    {% endif %}
+  {% endfor %}
 </section>
